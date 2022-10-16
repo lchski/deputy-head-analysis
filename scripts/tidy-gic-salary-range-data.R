@@ -31,7 +31,7 @@ gic_salary_ranges <- gic_salary_ranges_raw %>%
       ~ as.integer(str_remove_all(.x, "[^[0-9]]"))
   )) %>%
   mutate(
-    max_performance_award = as.integer(str_remove(max_performance_award, "%$")) / 100
+    max_performance_award = as.double(str_remove(max_performance_award, "%$")) / 100
   )
 
 gic_salary_ranges %>%
