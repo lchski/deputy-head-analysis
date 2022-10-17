@@ -45,3 +45,10 @@ Signal phrases:
   - "remuneration as set out in the annexed schedule, which salary is within the range [range] effective [date]"
   - "salary at the rate set out in the schedule hereto, which salary is within the range [range]"
   - "set out in the schedule hereto, which salary is within the range [range]"
+
+
+## Notes
+
+- Salary ranges shift over time, as executive pay is updated (following rounds of general collective bargaining).
+	- e.g., DM-2 in 2015–16 made 224,700 to 264,300, per _current_ version of the page. But go back to the [version from 2018](https://web.archive.org/web/20180223163506/https://www.canada.ca/en/privy-council/programs/appointments/governor-council-appointments/compensation-terms-conditions-employment/salary-ranges-performance-pay.html), and the range shows as 221,300 to 260,300.
+	- e.g., until recently, all executives were appointed and paid at the 2017-18 levels (where an EX-5 runs 181,000 to 212,900); these mass revisions are affected by “Salary Orders” (which, upon reflection, may be the easiest way to capture much of the pay, position, and dates for most people; they just exclude more recent appointments, and need to check how standard the form is)
