@@ -1,6 +1,7 @@
 source("load.R")
 
 library(tidytext)
+library(lubridate)
 
 # find deputy salary orders with English text and salary ranges
 deputy_salary_order_attachments <- salary_order_attachments %>%
@@ -66,3 +67,16 @@ salary_revisions %>%
 #   - salary min
 #   - salary max
 #   - effective date (occasionally with specific "from" and "to")
+
+testing_post_2015 <- salary_revisions %>%
+  filter(year(date) > 2015) %>%
+  slice_sample(n = 10)
+
+salary_revisions %>%
+  filter(year(date) > 2015) %>%
+  # edge case: "Natynczyk, Walter J., General (Retired), ..."
+  # edge case: "Sabia, Michael Jonathan, O.C., ..."
+  # edge case: "Shugart, P.C., Senator the Honourable Ian"
+  separate(salary_revision, sep = ", ", into = c("name_last", "name_first", "salary_revision"), extra = "merge") %>%
+  separate(salary_revision, sep = ", within the range \\(", into = c("position", "salary_revision"), extra = "merge") %>%
+  separate(salary_revision, sep = " – | - |\\), ", into = c("salary_min", "salary_max", "salary_revision"), extra = "merge")
