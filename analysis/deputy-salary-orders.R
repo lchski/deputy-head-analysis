@@ -28,7 +28,7 @@ salary_revisions <- deputy_salary_order_attachments %>%
     text = str_remove_all(text, regex("^…/[0-9]+$|^ ?- [0-9]+ -$", multiline = TRUE)), # page numbers
     text = str_replace_all(text, coll("; and"), ";"),
     text = str_replace_all(text, coll(";"), "."),
-    text = str_replace_all(text, regex("([a-z,])(\n\n)"), "$1")
+    text = str_replace_all(text, regex("([a-z,])(\n\n)"), "$1") # fix for 2+ line breaks within an entry
   ) %>%
   unnest_tokens(salary_revision, text, token = "paragraphs", to_lower = FALSE) %>%
   mutate(
@@ -47,3 +47,22 @@ salary_revisions %>%
   write_csv("data/out/deputy-salary-revisions.csv")
 
 
+
+# The form differs for salary revisions pre/post 2015. (There are none in 2015, handily!)
+# We can use a different handling function for each.
+# 
+# Before 2015, they begin with a preamble:
+# > "His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "
+# 
+# After 2015, there’s no preamble.
+# 
+# We can use the presence of the preamble (or just the year!) to sort out which handling function to use.
+# 
+# For both, though, we'll need to capture:
+# 
+# - name
+# - position
+# - (possible multiple per entry)
+#   - salary min
+#   - salary max
+#   - effective date (occasionally with specific "from" and "to")
