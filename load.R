@@ -15,8 +15,12 @@ deputy_appointment_order_attachments <- read_csv("data/source/github.com/lchski/
   filter(str_detect(text, "which (salary|remuneration) is within the range")) # only attachments with salary ranges
 
 # TODO: convert `attachments` to list[integer]
-salary_orders <- read_csv("data/source/github.com/lchski/oic-data/salary-orders.csv")
-
-deputy_appointment_order_attachments %>%
-  select(pc_number, date, text) %>%
-  View()
+salary_orders <- read_csv("data/source/github.com/lchski/oic-data/salary-orders.csv") %>%
+  mutate(attachments = str_split(attachments, ";"))
+salary_order_attachments <- read_csv("data/source/github.com/lchski/oic-data/salary-order-attachments.csv") %>%
+  left_join(
+    salary_orders %>%
+      unnest(attachments) %>%
+      select(attachments, pc_number, date) %>%
+      mutate(attachments = as.integer(attachments)),
+    by = c("id" = "attachments"))
