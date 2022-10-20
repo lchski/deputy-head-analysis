@@ -193,10 +193,10 @@ salary_revisions_post_2015_classified <- salary_revisions_post_2015 %>%
 
 # find unclassified entries
 salary_revisions_post_2015_classified %>%
-  filter(is.na(group_level))
+  filter(is.na(matched_group_level))
 
 salary_revisions_post_2015_classified %>%
   filter(month(start) == 4, day(start) == 1) %>%
-  count(fy = fiscal_year_start.x, group_level) %>%
-  ggplot(aes(x = fy, y = n, colour = group_level, fill = group_level)) +
+  count(fiscal_year_start, matched_group_level) %>%
+  ggplot(aes(x = fiscal_year_start, y = n, colour = matched_group_level, fill = matched_group_level)) +
   geom_col(position = "dodge")
