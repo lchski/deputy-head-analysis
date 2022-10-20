@@ -1,0 +1,7 @@
+group,name_full,position,corrected,error
+post_2015,Andrea Lyon,Senior Advisor to the Privy Council Office,TRUE,"A start date is 2018-04-01 when it should be 2019-01-07. See: https://pm.gc.ca/en/news/news-releases/2018/12/07/prime-minister-announces-changes-senior-ranks-public-service"
+post_2015,Anne Marie Smart,Senior Advisor to the Privy Council Office,FALSE,"No end date for salary, retired around September 2020. See: https://pm.gc.ca/en/news/news-releases/2020/09/08/prime-minister-announces-changes-senior-ranks-public-service"
+post_2015,Ava Yaskiel,Associate Deputy Minister of Finance with G7 and G20 responsibilities,TRUE,"Start date 2020-04-21, should be 2020-07-24. See: https://orders-in-council.canada.ca/attachment.php?attach=39511&lang=en"
+post_2015,Liseanne Forand,Senior Advisor to the Privy Council Office,TRUE,"A start date is 2015-04-01 when it should be 2015-07-06. See: https://orders-in-council.canada.ca/attachment.php?attach=31359&lang=en"
+post_2015,Marie Lemay,Senior Advisor to the Privy Council Office,TRUE,"A start date is 2018-04-01 when it should be 2019-01-28. See: https://orders-in-council.canada.ca/attachment.php?attach=37324&lang=en"
+post_2015,Ronald Parker,Senior Advisor to the Privy Council Office,TRUE,"A start date is 2018-04-01 when it should be 2018-12-17. See: https://orders-in-council.canada.ca/attachment.php?attach=37324&lang=en"

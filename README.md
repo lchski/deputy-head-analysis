@@ -3,6 +3,7 @@ Questions this project should answer:
 - By position:
 	- What’s the DM level of the position?
 	- Has that DM level ever changed?
+	- Is DM level related to size ($, FTEs) of department?
 - By person:
 	- What DM levels has that person held?
 	- How have they progressed through the DM levels?
@@ -53,3 +54,7 @@ Signal phrases:
 	- e.g., DM-2 in 2015–16 made 224,700 to 264,300, per _current_ version of the page. But go back to the [version from 2018](https://web.archive.org/web/20180223163506/https://www.canada.ca/en/privy-council/programs/appointments/governor-council-appointments/compensation-terms-conditions-employment/salary-ranges-performance-pay.html), and the range shows as 221,300 to 260,300.
 	- e.g., until recently, all executives were appointed and paid at the 2017-18 levels (where an EX-5 runs 181,000 to 212,900); these mass revisions are affected by “Salary Orders” (which, upon reflection, may be the easiest way to capture much of the pay, position, and dates for most people; they just exclude more recent appointments, and need to check how standard the form is)
 - Positions are sometimes "and concurrently" (and, sometimes, they’re concurrent without that flag—usually related to "Personal Representative for the G# Summit" or similar)—could split into a "position_secondary"
+
+- Would definitely be fun to look at appointment authorities, use of term or not, from appointment orders.
+- also the “from” locations (might be easier to use French version, as it puts the province in parentheses)
+

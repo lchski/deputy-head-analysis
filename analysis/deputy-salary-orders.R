@@ -2,6 +2,7 @@ source("load.R")
 
 library(tidytext)
 library(lubridate)
+library(fuzzyjoin)
 
 # find deputy salary orders with English text and salary ranges
 deputy_salary_order_attachments <- salary_order_attachments %>%
@@ -83,13 +84,18 @@ salary_revisions_post_2015 <- salary_revisions_raw %>%
       salary_revision,
       paste("General \\(Retired\\), ", "O\\.C\\., ", "P\\.C\\., Senator the Honourable", sep = "|")
     ),
+    salary_revision = str_replace_all(salary_revision, "Natynczyk, Walter John,|Natynczyk, Walter,|Natynczyk, Walter J.,", "Natynczyk, Walter J.,"),
     salary_revision = str_replace_all(
       salary_revision,
       "within the range of",
       "within the range"
-    )
+    ),
+    salary_revision = str_replace_all(salary_revision, "Agency within", "Agency, within"),
+    salary_revision = str_replace_all(salary_revision, "Cabinet within", "Cabinet, within")
   ) %>%
   separate(salary_revision, sep = ", ", into = c("name_last", "name_first", "salary_revision"), extra = "merge") %>%
+  mutate(name_full = str_squish(paste(name_first, name_last))) %>%
+  select(id:name_first, name_full, everything()) %>%
   separate(salary_revision, sep = ", within the range \\(", into = c("position", "salary_revision"), extra = "merge") %>%
   mutate(
     salary_revision = paste0(", within the range (", salary_revision),
@@ -114,8 +120,83 @@ salary_revisions_post_2015 <- salary_revisions_raw %>%
   ) %>%
   mutate(
     position = str_remove_all(position, "^former "),
+    position = case_when(
+      str_detect(position, "Deputy Secretary to the Cabinet \\(Plans and Consultations\\)$|Deputy Secretary to the Cabinet \\(Results and Delivery\\)$|Deputy Secretary to the Cabinet \\(Senior Personnel and Public Service Renewal\\)$") ~ paste0(position, ", Privy Council Office"),
+      TRUE ~ position
+    ),
     end = if_else(end == "", NA_character_, end),
     start = mdy(start),
     end = mdy(end),
     across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]")))
   )
+
+
+# Find the _last_ revision for a given combo of [person, position, date range]
+#   salary_revisions_post_2015 %>% arrange(name_full, position, start, end)
+# Or maybe group_by, then arrange, with `date` as final arbiter?
+# Also deal with `end` somehow? May need to fill down, or such
+#
+# Multi-step: find the fiscal year for a given revision (based on `start`—check if `end` ever exceeds a FY?), then fuzzyjoin
+# Confirm that the timespan for entries never exceeds a year:
+# salary_revisions_post_2015 %>%
+#   filter(! is.na(end)) %>%
+#   mutate(revision_years = time_length(start %--% end, "years")) %>%
+#   filter(revision_years >= 1)
+get_fiscal_year_start_for_date <- function(dtc) {
+  if (month(dtc) <= 3) {
+    return(year(dtc) - 1)
+  }
+
+  return(year(dtc))
+}
+
+salary_revisions_post_2015_classified <- salary_revisions_post_2015 %>%
+  mutate(
+    start = case_when(
+      pc_number == "2019-1324" & name_full == "Andrea Lyon" & position == "Senior Advisor to the Privy Council Office" & start == "2018-04-01" ~ ymd("2019-01-07"), # ref: https://pm.gc.ca/en/news/news-releases/2018/12/07/prime-minister-announces-changes-senior-ranks-public-service
+      pc_number == "2020-0974" & name_full == "Ava Yaskiel" & position == "Associate Deputy Minister of Finance with G7 and G20 responsibilities" & start == "2020-04-01" ~ ymd("2020-07-24"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=39511&lang=en
+      pc_number == "2016-0803" & name_full == "Liseanne Forand" & position == "Senior Advisor to the Privy Council Office" & start == "2015-04-01" ~ ymd("2015-07-06"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=31359&lang=en
+      pc_number == "2019-1324" & name_full == "Marie Lemay" & position == "Senior Advisor to the Privy Council Office" & start == "2018-04-01" ~ ymd("2019-01-28"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=37324&lang=en
+      pc_number == "2019-1324" & name_full == "Ronald Parker" & position == "Senior Advisor to the Privy Council Office" & start == "2018-04-01" ~ ymd("2018-12-17"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=37216&lang=en
+      TRUE ~ start
+    ),
+    end = case_when(
+      pc_number == "2022-1092" & name_full == "Ava Yaskiel" & position == "Associate Deputy Minister of Finance with G7 and G20 responsibilities" & start == "2021-04-01" ~ ymd("2021-08-31"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=39511&lang=en (no subsequent appointment OICs)
+      TRUE ~ end
+    )
+  ) %>%
+  mutate(fiscal_year_start = map_dbl(start, get_fiscal_year_start_for_date)) %>%
+  group_by(name_full, position, start) %>%
+  fill(end, .direction = "updown") %>%
+  group_by(name_full, position, start, end) %>%
+  slice_tail(n = 1) %>% # to check for possible errors (i.e., multiple revisions for same position in same fiscal year), run this after slice_tail: %>% group_by(name_full, position, fiscal_year_start) %>% count(fiscal_year_start) %>% filter(n > 1) %>% write_csv("data/out/multiple-revisions-in-fiscal.csv")
+  mutate(fiscal_year_start = fiscal_year_start * 100000) %>% # inflate well beyond the tolerance, so we match years "exactly"
+  difference_left_join(
+    gic_salary_ranges %>% filter(group == "DM") %>% mutate(fiscal_year_start = fiscal_year_start * 100000),
+    max_dist = 1000 # tolerance of +/- $1000 for salary
+  ) %>%
+  rename(
+    fiscal_year_start = fiscal_year_start.x,
+    salary_min = salary_min.x,
+    salary_max = salary_max.x,
+    matched_group_level = group_level,
+    matched_group = group,
+    matched_level = level,
+    matched_salary_min = salary_min.y,
+    matched_salary_max = salary_max.y,
+    matched_max_performance_award = max_performance_award
+  ) %>%
+  select(-fiscal_year_start.y) %>%
+  mutate(fiscal_year_start = fiscal_year_start / 100000) %>%
+  ungroup() %>%
+  arrange(name_full, start)
+
+# find unclassified entries
+salary_revisions_post_2015_classified %>%
+  filter(is.na(group_level))
+
+salary_revisions_post_2015_classified %>%
+  filter(month(start) == 4, day(start) == 1) %>%
+  count(fy = fiscal_year_start.x, group_level) %>%
+  ggplot(aes(x = fy, y = n, colour = group_level, fill = group_level)) +
+  geom_col(position = "dodge")
