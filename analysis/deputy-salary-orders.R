@@ -159,6 +159,8 @@ salary_revisions <- bind_rows(
     across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]")))
   )
 
+# TODO: fix "Deputy Minister, Department of ..." format (pre-2015, generally) into "Deputy Minister of ..." format
+
 
 # Find the _last_ revision for a given combo of [person, position, date range]
 #   salary_revisions_post_2015 %>% arrange(name_full, position, start, end)
