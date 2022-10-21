@@ -73,6 +73,28 @@ salary_revisions_raw %>%
 #   - salary max
 #   - effective date (occasionally with specific "from" and "to")
 
+salary_revisions_pre_2015 <- salary_revisions_raw %>%
+  filter(year(date) < 2015) %>%
+  mutate(
+    salary_revision = str_remove(salary_revision, "^His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
+    salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule")
+  ) %>%
+  separate(salary_revision, sep = ", ", into = c("name_full", "salary_revision"), extra = "merge") %>%
+  separate(salary_revision, sep = ", as set out in the schedule hereto, which salary is within the range \\(", into = c("position", "salary_revision"), extra = "merge") %>%
+  separate(salary_revision, sep = " – | - |\\), ", into = c("salary_min", "salary_max", "salary_revision"), extra = "merge") %>%
+  mutate(
+    salary_revision = str_replace_all(salary_revision, coll("starting"), "commencing"),
+    salary_revision = str_remove(salary_revision, ".$")
+  ) %>%
+  extract(
+    salary_revision,
+    into = c("start", "end"),
+    "(?:commencing|effective) ([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})(?: and terminating)?(?: on)? ?([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})?"
+  )
+
+salary_revisions_pre_2015 %>% write_csv("data/out/deputy-salary-levels-revisions-pre-2015.csv")
+
+
 salary_revisions_post_2015 <- salary_revisions_raw %>%
   filter(year(date) > 2015) %>%
   mutate(
@@ -117,7 +139,14 @@ salary_revisions_post_2015 <- salary_revisions_raw %>%
     salary_revision,
     into = c("start", "end"),
     "(?:commencing|effective)(?: on)? ([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})(?: and ending)?(?: on)? ?([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})?"
-  ) %>%
+  )
+
+salary_revisions_post_2015 %>% write_csv("data/out/deputy-salary-levels-revisions-post-2015.csv")
+
+salary_revisions <- bind_rows(
+  salary_revisions_pre_2015,
+  salary_revisions_post_2015
+) %>%
   mutate(
     position = str_remove_all(position, "^former "),
     position = case_when(
@@ -150,7 +179,7 @@ get_fiscal_year_start_for_date <- function(dtc) {
   return(year(dtc))
 }
 
-salary_revisions_post_2015_classified <- salary_revisions_post_2015 %>%
+salary_revisions_classified <- salary_revisions %>%
   mutate(
     start = case_when(
       pc_number == "2019-1324" & name_full == "Andrea Lyon" & position == "Senior Advisor to the Privy Council Office" & start == "2018-04-01" ~ ymd("2019-01-07"), # ref: https://pm.gc.ca/en/news/news-releases/2018/12/07/prime-minister-announces-changes-senior-ranks-public-service
@@ -173,7 +202,7 @@ salary_revisions_post_2015_classified <- salary_revisions_post_2015 %>%
   mutate(fiscal_year_start = fiscal_year_start * 100000) %>% # inflate well beyond the tolerance, so we match years "exactly"
   difference_left_join(
     gic_salary_ranges %>% filter(group == "DM") %>% mutate(fiscal_year_start = fiscal_year_start * 100000),
-    max_dist = 1000 # tolerance of +/- $1000 for salary
+    max_dist = 3500 # tolerance of +/- $3500 for salary
   ) %>%
   rename(
     fiscal_year_start = fiscal_year_start.x,
@@ -192,10 +221,10 @@ salary_revisions_post_2015_classified <- salary_revisions_post_2015 %>%
   arrange(name_full, start)
 
 # find unclassified entries
-salary_revisions_post_2015_classified %>%
+salary_revisions_classified %>%
   filter(is.na(matched_group_level))
 
-salary_revisions_post_2015_classified %>%
+salary_revisions_classified %>%
   filter(month(start) == 4, day(start) == 1) %>%
   count(fiscal_year_start, matched_group_level) %>%
   ggplot(aes(x = fiscal_year_start, y = n, colour = matched_group_level, fill = matched_group_level)) +
