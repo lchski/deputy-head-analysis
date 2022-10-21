@@ -242,3 +242,31 @@ salary_revisions_classified %>%
   count(fiscal_year_start, matched_group_level) %>%
   ggplot(aes(x = fiscal_year_start, y = n, colour = matched_group_level, fill = matched_group_level)) +
   geom_col(position = "dodge")
+
+library(plotly)
+
+positions_with_more_than_one_level <- salary_revisions_classified %>%
+  group_by(position) %>%
+  distinct(matched_level) %>%
+  ungroup() %>%
+  count(position) %>%
+  filter(n > 1) %>%
+  pull(position)
+
+ggplotly(salary_revisions_classified %>%
+  filter(
+    position %in% (
+      salary_revisions_classified %>%
+        filter(position %in% positions_with_more_than_one_level) %>%
+        count(position, sort = TRUE) %>%
+        slice_head(n = 15) %>%
+        pull(position)
+    )
+  ) %>%
+  ggplot(aes(x = start, y = matched_level, colour = position)) +
+  geom_point() +
+  geom_line()
+)
+
+
+
