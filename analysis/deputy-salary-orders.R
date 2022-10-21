@@ -149,9 +149,16 @@ salary_revisions <- bind_rows(
 ) %>%
   mutate(
     position = str_remove_all(position, "^former "),
+    position = str_replace_all(position, c(
+      "Miniser" = "Minister",
+      "Treasury of Canada Secretariat" = "Treasury Board",
+      "Treasury Board of Canada Secretariat" = "Treasury Board"
+    )),
     position = case_when(
       str_detect(position, "Deputy Secretary to the Cabinet \\(Plans and Consultations\\)$|Deputy Secretary to the Cabinet \\(Results and Delivery\\)$|Deputy Secretary to the Cabinet \\(Senior Personnel and Public Service Renewal\\)$") ~ paste0(position, ", Privy Council Office"),
       position == "Chief Public Health Officer of Canada" ~ "Chief Public Health Officer",
+      position == "General, Chief of the Defence Staff" ~ "Chief of the Defence Staff",
+      position == "Chief Information Officer for the Government of Canada" ~ "Chief Information Officer of Canada",
       TRUE ~ position
     ),
     name_full = case_when(
@@ -168,9 +175,24 @@ salary_revisions <- bind_rows(
     start = mdy(start),
     end = mdy(end),
     across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]")))
+  ) %>%
+  mutate(
+    position_standardized = str_to_lower(position),
+    position_standardized = str_replace_all(position_standardized, c(
+      "minister," = "minister",
+      "director," = "director",
+      "coordinator," = "coordinator",
+      "secretary," = "secretary"
+    )),
+    position_standardized = str_remove_all(position_standardized, "to |the |of |for |deputy minister |government canada|department "),
+    position_standardized = str_squish(position_standardized)
   )
 
-# TODO: fix "Deputy Minister, Department of ..." format (pre-2015, generally) into "Deputy Minister of ..." format
+salary_revisions %>% count(position, sort = TRUE)
+salary_revisions %>% count(position_standardized, sort = TRUE)
+salary_revisions %>% count(position_standardized, sort = TRUE) %>% View
+
+# TODO: for position_standardized, look at: ','
 
 
 # Find the _last_ revision for a given combo of [person, position, date range]
@@ -208,9 +230,9 @@ salary_revisions_classified <- salary_revisions %>%
     )
   ) %>%
   mutate(fiscal_year_start = map_dbl(start, get_fiscal_year_start_for_date)) %>%
-  group_by(name_full, position, start) %>%
+  group_by(name_full, position_standardized, start) %>%
   fill(end, .direction = "updown") %>%
-  group_by(name_full, position, start, end) %>%
+  group_by(name_full, position_standardized, start, end) %>%
   slice_tail(n = 1) %>% # to check for possible errors (i.e., multiple revisions for same position in same fiscal year), run this after slice_tail: %>% group_by(name_full, position, fiscal_year_start) %>% count(fiscal_year_start) %>% filter(n > 1) %>% write_csv("data/out/multiple-revisions-in-fiscal.csv")
   mutate(fiscal_year_start = fiscal_year_start * 100000) %>% # inflate well beyond the tolerance, so we match years "exactly"
   difference_left_join(
@@ -246,24 +268,24 @@ salary_revisions_classified %>%
 library(plotly)
 
 positions_with_more_than_one_level <- salary_revisions_classified %>%
-  group_by(position) %>%
+  group_by(position_standardized) %>%
   distinct(matched_level) %>%
   ungroup() %>%
-  count(position) %>%
+  count(position_standardized) %>%
   filter(n > 1) %>%
-  pull(position)
+  pull(position_standardized)
 
 ggplotly(salary_revisions_classified %>%
   filter(
-    position %in% (
+    position_standardized %in% (
       salary_revisions_classified %>%
-        filter(position %in% positions_with_more_than_one_level) %>%
-        count(position, sort = TRUE) %>%
+        filter(position_standardized %in% positions_with_more_than_one_level) %>%
+        count(position_standardized, sort = TRUE) %>%
         slice_head(n = 15) %>%
-        pull(position)
+        pull(position_standardized)
     )
   ) %>%
-  ggplot(aes(x = start, y = matched_level, colour = position)) +
+  ggplot(aes(x = start, y = matched_level, colour = position_standardized)) +
   geom_point() +
   geom_line()
 )
