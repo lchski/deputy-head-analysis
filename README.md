@@ -55,6 +55,13 @@ Signal phrases:
 	- e.g., until recently, all executives were appointed and paid at the 2017-18 levels (where an EX-5 runs 181,000 to 212,900); these mass revisions are affected by “Salary Orders” (which, upon reflection, may be the easiest way to capture much of the pay, position, and dates for most people; they just exclude more recent appointments, and need to check how standard the form is)
 - Positions are sometimes "and concurrently" (and, sometimes, they’re concurrent without that flag—usually related to "Personal Representative for the G# Summit" or similar)—could split into a "position_secondary"
 
+- Older salary ranges available from previous PCO site. 2018 scrape, for:
+	- 2013: https://web.archive.org/web/20180201222842/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2013-eng.htm
+	- 2012: https://web.archive.org/web/20180201222844/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2012-eng.htm
+	- 2011: https://web.archive.org/web/20180201222845/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2011-eng.htm
+  2015 scrape, for:
+	- 2010: https://web.archive.org/web/20150613040456/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2010-eng.htm
+
 - Would definitely be fun to look at appointment authorities, use of term or not, from appointment orders.
 - also the “from” locations (might be easier to use French version, as it puts the province in parentheses)
 

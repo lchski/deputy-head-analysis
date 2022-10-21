@@ -2,6 +2,15 @@ library(tidyverse)
 
 # Copied the data from:
 # > https://www.canada.ca/en/privy-council/programs/appointments/governor-council-appointments/compensation-terms-conditions-employment/salary-ranges-performance-pay.html
+#
+# Older salary ranges available from previous PCO site.
+#   2018 scrape, for:
+#   - 2013: https://web.archive.org/web/20180201222842/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2013-eng.htm
+#   - 2012: https://web.archive.org/web/20180201222844/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2012-eng.htm
+#   - 2011: https://web.archive.org/web/20180201222845/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2011-eng.htm
+#   2015 scrape, for:
+#   - 2010: https://web.archive.org/web/20150613040456/http://www.pco-bcp.gc.ca/index.asp?lang=eng&page=secretariats&sub=spsp-psps&doc=sal/sal2010-eng.htm
+#
 # Into a format like so:
 # -----------------------------------
 # fiscal_year_start	group_level	salary_min	salary_max	max_performance_award
@@ -25,6 +34,10 @@ gic_salary_ranges_raw <- read_tsv("data/source/canada.ca/salary-ranges-gic-appoi
 
 gic_salary_ranges <- gic_salary_ranges_raw %>%
   fill(fiscal_year_start, .direction = "down") %>%
+  mutate(
+    group_level = str_replace_all(group_level, coll("-"), " "),
+    group_level = str_replace_all(group_level, coll("GX"), "GX 0") # fake number for GX level
+  ) %>%
   separate(group_level, into = c("group", "level"), remove = FALSE, convert = TRUE) %>%
   mutate(across(
       contains("salary"),
@@ -32,7 +45,8 @@ gic_salary_ranges <- gic_salary_ranges_raw %>%
   )) %>%
   mutate(
     max_performance_award = as.double(str_remove(max_performance_award, "%$")) / 100
-  )
+  ) %>%
+  arrange(desc(fiscal_year_start), group, level)
 
 gic_salary_ranges %>%
   write_csv("data/source/canada.ca/salary-ranges-gic-appointees.csv")

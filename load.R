@@ -2,7 +2,7 @@ library(tidyverse)
 
 gic_salary_ranges <- read_csv("data/source/canada.ca/salary-ranges-gic-appointees.csv") %>%
   bind_rows( # 2022 ranges aren't out yet (won't be for... some time, probably!), so we carry the 2021 ranges forward
-    gic_salary_ranges %>%
+    read_csv("data/source/canada.ca/salary-ranges-gic-appointees.csv") %>%
       filter(fiscal_year_start == 2021) %>%
       mutate(fiscal_year_start = 2022)
   )
