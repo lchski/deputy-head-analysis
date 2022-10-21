@@ -151,7 +151,18 @@ salary_revisions <- bind_rows(
     position = str_remove_all(position, "^former "),
     position = case_when(
       str_detect(position, "Deputy Secretary to the Cabinet \\(Plans and Consultations\\)$|Deputy Secretary to the Cabinet \\(Results and Delivery\\)$|Deputy Secretary to the Cabinet \\(Senior Personnel and Public Service Renewal\\)$") ~ paste0(position, ", Privy Council Office"),
+      position == "Chief Public Health Officer of Canada" ~ "Chief Public Health Officer",
       TRUE ~ position
+    ),
+    name_full = case_when(
+      name_full == "Yaprak Baltacioglu" ~ "Yaprak Baltacioğlu",
+      name_full == "David Butler-Jones" ~ "David Jones",
+      name_full == "Ward P. D. Elcock" ~ "Ward P.D. Elcock",
+      name_full == "William Pentney" ~ "William F. Pentney",
+      name_full == "Yazmine Cecilia Laroche" ~ "Yazmine Laroche",
+      name_full == "Yasmine Laroche" ~ "Yazmine Laroche",
+      name_full == "Robert Fadden" ~ "Richard Fadden", # 2013-1353 has... the wrong name (for one of his roles!)
+      TRUE ~ name_full
     ),
     end = if_else(end == "", NA_character_, end),
     start = mdy(start),
