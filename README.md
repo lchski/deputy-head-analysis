@@ -65,3 +65,12 @@ Signal phrases:
 - Would definitely be fun to look at appointment authorities, use of term or not, from appointment orders.
 - also the “from” locations (might be easier to use French version, as it puts the province in parentheses)
 
+- May also be documented elsewhere!? https://open.canada.ca/en/search/reclassification/reference/8b0f00c80a378631cf0df8c77d0e12f1
+
+
+- Other salary orders:
+  - "Order fixing the salary of certain persons appointed by the Governor in Council" (sometimes includes qualifier, e.g., CEO), e.g., 2009-1576, 2007-2023 (includes one former DM), 2007-0357 (a few DMs)
+  - "Fix the salary and employment conditions" (sometimes with “Order fixing...” ?)
+  - "Fixing of the remuneration payable to certain persons appointed by the Governor in Council" (some non-DM), e.g., 2010-1167, 2007-1333, 2006-1316, 2005-2007 (includes one former DM), 2005-1331, 2005-0729 (a few DM), 2005-0034, 2004-1318
+  - various individual salary orders, e.g., 2009-0773, 2009-0778, 2008-1513, 2022-1093, 2007-0262
+- These include non-DMs, but may be interesting to capture to show movement from / to DM ranks, if any (lower priority)
