@@ -77,6 +77,7 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
   filter(year(date) < 2015) %>%
   mutate(
     salary_revision = str_remove(salary_revision, "^His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
+    salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary (and employment conditions|and other employment conditions)? ?of "),
     salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule")
   ) %>%
   separate(salary_revision, sep = ", ", into = c("name_full", "salary_revision"), extra = "merge") %>%
