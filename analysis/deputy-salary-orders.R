@@ -291,4 +291,42 @@ ggplotly(salary_revisions_classified %>%
 )
 
 
+summarize_matched_levels_by_group <- function(df, ...) {
+  df %>%
+    group_by(...) %>%
+    summarize(
+      count = n(),
+      min = min(matched_level, na.rm = TRUE),
+      max = max(matched_level, na.rm = TRUE),
+      avg = mean(matched_level, na.rm = TRUE),
+      median = median(matched_level, na.rm = TRUE),
+      first = first(matched_level, order_by = start),
+      last = last(matched_level, order_by = start)
+    ) %>%
+    mutate(
+      diff_min_max = max - min,
+      diff_max_last = max - last
+    )
+}
+
+salary_revisions_classified %>%
+  summarize_matched_levels_by_group(name_full) %>%
+  View("summary levels by person")
+
+salary_revisions_classified %>%
+  summarize_matched_levels_by_group(position_standardized) %>%
+  View("summary levels by position")
+
+salary_revisions_classified %>%
+  filter(str_detect(position_standardized, "associate")) %>%
+  summarize_matched_levels_by_group()
+
+salary_revisions_classified %>%
+  filter(
+    str_detect(position_standardized, "indian|aboriginal|indigenous"),
+    ! str_detect(position_standardized, "associate")
+  ) %>%
+  summarize_matched_levels_by_group()
+
+
 
