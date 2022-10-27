@@ -8,7 +8,7 @@ library(fuzzyjoin)
 deputy_salary_order_attachments <- salary_order_attachments %>%
   filter(pc_number %in% (
     salary_orders %>%
-      filter(str_detect(precis, "Deputy Min")) %>%
+      filter(str_detect(precis, "Deputy Min")) %>% # TODO: adjust to incorporate broader set of orders
       pull(pc_number)
   )) %>%
   filter(
@@ -17,12 +17,30 @@ deputy_salary_order_attachments <- salary_order_attachments %>%
   ) %>%
   select(id, pc_number, date, text)
 
+gic_appointee_order_attachments <- salary_order_attachments %>%
+  filter(pc_number %in% (
+    salary_orders %>%
+      filter(str_detect(precis, "(?:persons|individuals) appointed by the Governor")) %>%
+      pull(pc_number)
+  )) %>%
+  filter(
+    str_detect(text, "Governor General in Council"),
+    str_detect(text, "within the range"),
+    str_detect(text, "Deputy Min")
+  ) %>%
+  select(id, pc_number, date, text)
+
+
 # for debugging / text reference
 deputy_salary_order_attachments %>%
   select(id, pc_number, date, text) %>%
   write_csv("data/out/deputy-salary-order-attachments.csv")
 
-salary_revisions_raw <- deputy_salary_order_attachments %>%
+gic_appointee_order_attachments %>%
+  select(id, pc_number, date, text) %>%
+  write_csv("data/out/gic-appointee-salary-order-attachments.csv")
+
+salary_revisions_raw <- gic_appointee_order_attachments %>%
   mutate(
     text = str_remove_all(text, regex("^PC Number: [0-9]{4}-[0-9]{4}$", multiline = TRUE)), # opening PC number
     text = str_remove_all(text, regex("^Date: [0-9]{4}-[0-9]{2}-[0-9]{2}$", multiline = TRUE)), # opening date
@@ -78,6 +96,7 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
   mutate(
     salary_revision = str_remove(salary_revision, "^His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
     salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary (and employment conditions|and other employment conditions)? ?of "),
+    salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
     salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule")
   ) %>%
   separate(salary_revision, sep = ", ", into = c("name_full", "salary_revision"), extra = "merge") %>%
