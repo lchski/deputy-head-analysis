@@ -26,7 +26,8 @@ gic_appointee_order_attachments <- salary_order_attachments %>%
   filter(
     str_detect(text, "Governor General in Council"),
     str_detect(text, "within the range"),
-    str_detect(text, "Deputy Min")
+    str_detect(text, "Deputy Min"),
+    ! pc_number == "2007-2023" # remove an OIC that has mostly non-DM revisions (the one DM revision is manually re-added, below)
   ) %>%
   select(id, pc_number, date, text)
 
@@ -40,7 +41,7 @@ gic_appointee_order_attachments %>%
   select(id, pc_number, date, text) %>%
   write_csv("data/out/gic-appointee-salary-order-attachments.csv")
 
-salary_revisions_raw <- gic_appointee_order_attachments %>%
+salary_revisions_raw <- gic_appointee_order_attachments %>% # TODO: bind the salary and GIC orders
   mutate(
     text = str_remove_all(text, regex("^PC Number: [0-9]{4}-[0-9]{4}$", multiline = TRUE)), # opening PC number
     text = str_remove_all(text, regex("^Date: [0-9]{4}-[0-9]{2}-[0-9]{2}$", multiline = TRUE)), # opening date
@@ -52,7 +53,8 @@ salary_revisions_raw <- gic_appointee_order_attachments %>%
     text = str_replace_all(text, coll("–"), "-"),
     text = str_replace_all(text, coll("witihin"), "within"),
     text = str_replace_all(text, coll("andwithin"), "and within"),
-    text = str_replace_all(text, coll("within the ange"), "within the range")
+    text = str_replace_all(text, coll("within the ange"), "within the range"),
+    text = str_replace_all(text, coll("‑"), "-")
   ) %>%
   unnest_tokens(salary_revision, text, token = "paragraphs", to_lower = FALSE) %>%
   mutate(
@@ -64,6 +66,14 @@ salary_revisions_raw <- gic_appointee_order_attachments %>%
     ! str_detect(salary_revision, "^Sur recommandation du premier ministre"), # French entries
     ! str_detect(salary_revision, "^…"), # errant page number
     ! str_detect(salary_revision, "in the amount and on the date indicated in the annexed schedule, of:$") # intro phrases for post-2015 revisions
+  ) %>%
+  bind_rows(# manually add in an errant DM revision found amidst a bunch of others
+    tibble(
+      id = 17846,
+      pc_number = "2007-2023",
+      date = as_date("2007-12-18"),
+      salary_revision = "Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of Ian E. Bennett, former Deputy Minister, Department of Finance, as set out in the schedule hereto, which salary is within the range ($245,100 - $288,400), for the period commencing April 1, 2006 and terminating June 11, 2006."
+    )
   )
 
 # for debugging / text reference
@@ -93,11 +103,18 @@ salary_revisions_raw %>%
 
 salary_revisions_pre_2015 <- salary_revisions_raw %>%
   filter(year(date) < 2015) %>%
+  filter(
+    ! str_detect(salary_revision, "within the range GCQ? [0-9]"),
+    ! str_detect(salary_revision, regex("within the Crown Corporation Group [0-9]", ignore_case = TRUE)),
+    ! str_detect(salary_revision, regex("which per diem rate", ignore_case = TRUE)),
+    ! str_detect(salary_revision, "of Members \\(|of Lay Members")
+  ) %>%
   mutate(
     salary_revision = str_remove(salary_revision, "^His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
     salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary (and employment conditions|and other employment conditions)? ?of "),
     salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
-    salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule")
+    salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule"),
+    salary_revision = str_replace_all(salary_revision, coll(", set out in the schedule"), ", as set out in the schedule")
   ) %>%
   separate(salary_revision, sep = ", ", into = c("name_full", "salary_revision"), extra = "merge") %>%
   separate(salary_revision, sep = ", as set out in the schedule hereto, which salary is within the range \\(", into = c("position", "salary_revision"), extra = "merge") %>%
@@ -106,10 +123,16 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
     salary_revision = str_replace_all(salary_revision, coll("starting"), "commencing"),
     salary_revision = str_remove(salary_revision, ".$")
   ) %>%
+  mutate(
+    salary_revision = str_replace(salary_revision, coll("30 September"), "September 30") # one date out of format, in all the years!
+  ) %>%
   extract(
     salary_revision,
     into = c("start", "end"),
     "(?:commencing|effective) ([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})(?: and terminating)?(?: on)? ?([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})?"
+  ) %>%
+  filter(
+    ! is.na(end) # catch a few oddballs (none of them are in-scope)
   )
 
 salary_revisions_pre_2015 %>% write_csv("data/out/deputy-salary-levels-revisions-pre-2015.csv")
