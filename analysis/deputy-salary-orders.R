@@ -8,7 +8,7 @@ library(fuzzyjoin)
 deputy_salary_order_attachments <- salary_order_attachments %>%
   filter(pc_number %in% (
     salary_orders %>%
-      filter(str_detect(precis, "Deputy Min")) %>% # TODO: adjust to incorporate broader set of orders
+      filter(str_detect(precis, "Deputy Min")) %>%
       pull(pc_number)
   )) %>%
   filter(
@@ -41,7 +41,11 @@ gic_appointee_order_attachments %>%
   select(id, pc_number, date, text) %>%
   write_csv("data/out/gic-appointee-salary-order-attachments.csv")
 
-salary_revisions_raw <- gic_appointee_order_attachments %>% # TODO: bind the salary and GIC orders
+salary_revisions_raw <- bind_rows(
+  deputy_salary_order_attachments,
+  gic_appointee_order_attachments
+) %>%
+  distinct(id, .keep_all = TRUE) %>%
   mutate(
     text = str_remove_all(text, regex("^PC Number: [0-9]{4}-[0-9]{4}$", multiline = TRUE)), # opening PC number
     text = str_remove_all(text, regex("^Date: [0-9]{4}-[0-9]{2}-[0-9]{2}$", multiline = TRUE)), # opening date
@@ -54,7 +58,8 @@ salary_revisions_raw <- gic_appointee_order_attachments %>% # TODO: bind the sal
     text = str_replace_all(text, coll("witihin"), "within"),
     text = str_replace_all(text, coll("andwithin"), "and within"),
     text = str_replace_all(text, coll("within the ange"), "within the range"),
-    text = str_replace_all(text, coll("‑"), "-")
+    text = str_replace_all(text, coll("‑"), "-"),
+    text = str_replace_all(text, coll("Council,on"), "Council, on")
   ) %>%
   unnest_tokens(salary_revision, text, token = "paragraphs", to_lower = FALSE) %>%
   mutate(
@@ -111,7 +116,7 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
   ) %>%
   mutate(
     salary_revision = str_remove(salary_revision, "^His Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
-    salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary (and employment conditions|and other employment conditions)? ?of "),
+    salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary (and employment conditions|and other employment conditions|and conditions of employment)? ?of "),
     salary_revision = str_remove(salary_revision, "^Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, hereby fixes the salary of "),
     salary_revision = str_replace_all(salary_revision, coll(", s set out in the schedule"), ", as set out in the schedule"),
     salary_revision = str_replace_all(salary_revision, coll(", set out in the schedule"), ", as set out in the schedule")
@@ -132,7 +137,8 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
     "(?:commencing|effective) ([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})(?: and terminating)?(?: on)? ?([A-Za-z]* ?[0-9]+ ?, ?[0-9]{4})?"
   ) %>%
   filter(
-    ! is.na(end) # catch a few oddballs (none of them are in-scope)
+    ! is.na(end), # catch a few oddballs (none of them are in-scope)
+    ! name_full == "Her Excellency the Governor General in Council" # some more oddballs
   )
 
 salary_revisions_pre_2015 %>% write_csv("data/out/deputy-salary-levels-revisions-pre-2015.csv")
