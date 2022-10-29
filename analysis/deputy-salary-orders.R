@@ -276,6 +276,12 @@ salary_revisions <- bind_rows(
     str_detect(position_standardized, "correction") ~ "CSC",
     TRUE ~ NA_character_
   )) %>%
+  mutate(
+    position_seniority = case_when(
+      str_detect(position_standardized, "associate|assistant|vice-|deputy(?! attorney)") ~ "0 - junior",
+      TRUE ~ "1 - normal / other"
+    )
+  ) %>%
   select(
     id:position,
     position_standardized,
@@ -418,7 +424,7 @@ summarize_matched_levels_by_group <- function(df, ...) {
       count = n(),
       min = min(matched_level, na.rm = TRUE),
       max = max(matched_level, na.rm = TRUE),
-      avg = mean(matched_level, na.rm = TRUE),
+      avg = round(mean(matched_level, na.rm = TRUE), 1),
       median = median(matched_level, na.rm = TRUE),
       first = first(matched_level, order_by = start),
       last = last(matched_level, order_by = start)
@@ -438,8 +444,13 @@ salary_revisions_classified %>%
   View("summary levels by position")
 
 salary_revisions_classified %>%
-  filter(str_detect(position_standardized, "associate")) %>%
-  summarize_matched_levels_by_group()
+  summarize_matched_levels_by_group(position_portfolio_department) %>%
+  View("summary levels by portfolio")
+
+salary_revisions_classified %>%
+  summarize_matched_levels_by_group(position_seniority, position_portfolio_department) %>%
+  arrange(position_portfolio_department) %>%
+  View("summary levels by seniority, portfolio")
 
 salary_revisions_classified %>%
   filter(
