@@ -65,7 +65,7 @@ Signal phrases:
 - Would definitely be fun to look at appointment authorities, use of term or not, from appointment orders.
 - also the “from” locations (might be easier to use French version, as it puts the province in parentheses)
 
-- May also be documented elsewhere!? https://open.canada.ca/en/search/reclassification/reference/8b0f00c80a378631cf0df8c77d0e12f1
+
 
 
 - Other salary orders:
@@ -74,3 +74,18 @@ Signal phrases:
   - "Fixing of the remuneration payable to certain persons appointed by the Governor in Council" (some non-DM), e.g., 2010-1167, 2007-1333, 2006-1316, 2005-2007 (includes one former DM), 2005-1331, 2005-0729 (a few DM), 2005-0034, 2004-1318
   - various individual salary orders, e.g., 2009-0773, 2009-0778, 2008-1513, 2022-1093, 2007-0262
 - These include non-DMs, but may be interesting to capture to show movement from / to DM ranks, if any (lower priority)
+
+
+
+Limitations:
+- doesn't capture DMs appointed or promoted after the latest salary order (currently October 2022), nor much movement within 2022
+
+
+
+
+Reflections
+- never (?) demoted, from one level to another (steps / salary progression, unknown)
+- but the level of a given position can change, depending on the person occupying it
+- which challenges the core idea of classification, used everywhere else in the public service: the duties of the role are X, Y, Z, so it's a level #, and you either are or aren't qualified for that level
+- sometimes, apparently (but rarely), this is treated as an actual reclassification: https://open.canada.ca/en/search/reclassification/reference/8b0f00c80a378631cf0df8c77d0e12f1
+- otherwise, it seems to largely be "this person was a 3, they're moved to this post [possibly for other reasons, unrelated to particular competence in that field!], they must remain a 3"
