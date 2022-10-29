@@ -59,7 +59,8 @@ salary_revisions_raw <- bind_rows(
     text = str_replace_all(text, coll("andwithin"), "and within"),
     text = str_replace_all(text, coll("within the ange"), "within the range"),
     text = str_replace_all(text, coll("‑"), "-"),
-    text = str_replace_all(text, coll("Council,on"), "Council, on")
+    text = str_replace_all(text, coll("Council,on"), "Council, on"),
+    text = str_replace_all(text, coll("Mnister"), "Minister")
   ) %>%
   unnest_tokens(salary_revision, text, token = "paragraphs", to_lower = FALSE) %>%
   mutate(
@@ -226,6 +227,9 @@ salary_revisions <- bind_rows(
     across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]")))
   ) %>%
   mutate(
+    salary_range = salary_max - salary_min
+  ) %>%
+  mutate(
     position_standardized = str_to_lower(position),
     position_standardized = str_replace_all(position_standardized, c(
       "minister," = "minister",
@@ -235,7 +239,74 @@ salary_revisions <- bind_rows(
     )),
     position_standardized = str_remove_all(position_standardized, "to |the |of |for |deputy minister |government canada|department "),
     position_standardized = str_squish(position_standardized)
+  ) %>%
+  mutate(position_portfolio_department = case_when(
+    str_detect(position_standardized, "national defence") ~ "DND",
+    str_detect(position_standardized, "finance") ~ "FIN",
+    str_detect(position_standardized, "privy council|cabinet|intergovernmental affairs") ~ "PCO",
+    str_detect(position_standardized, "advisor prime minister") ~ "PCO",
+    str_detect(position_standardized, "treasury board|comptroller general|chief information|chief human resources|public service human resources|public service accessibility") ~ "TBS",
+    str_detect(position_standardized, "immigration") ~ "IRCC",
+    str_detect(position_standardized, "social development|labour(?! relations)|employment and social|human resources and|transformation officer, service canada") ~ "ESDC",
+    str_detect(position_standardized, "agriculture") ~ "AAFC",
+    str_detect(position_standardized, "justice") ~ "JUS",
+    str_detect(position_standardized, "public health") ~ "PHAC",
+    str_detect(position_standardized, "health(?! and| research)") ~ "HC",
+    str_detect(position_standardized, "indigenous|aboriginal|indian") ~ "INAC", # NB: definitely a simplifying decision here, given machinery history
+    str_detect(position_standardized, "foreign affairs|international") ~ "GAC",
+    str_detect(position_standardized, "veterans") ~ "VAC",
+    str_detect(position_standardized, "heritage") ~ "PCH",
+    str_detect(position_standardized, "women") ~ "WAGE",
+    str_detect(position_standardized, "transport(?!ation)") ~ "TC",
+    str_detect(position_standardized, "infrastructure") ~ "INFC",
+    str_detect(position_standardized, "innovation|industry|economic development|economic diversification|atlantic canada opportunities") ~ "ISED", # TBC: want to split economic development agencies into constituent parts?
+    str_detect(position_standardized, "natural resources") ~ "NRCan",
+    str_detect(position_standardized, "environment") ~ "ECCC",
+    str_detect(position_standardized, "fisheries|coast guard") ~ "DFO",
+    str_detect(position_standardized, "public safety") ~ "PS",
+    str_detect(position_standardized, "public services|public works") ~ "PSPC",
+    str_detect(position_standardized, "shared services") ~ "SSC",
+    str_detect(position_standardized, "security intelligence") ~ "CSIS",
+    str_detect(position_standardized, "communications security") ~ "CSE",
+    str_detect(position_standardized, "revenue") ~ "CRA",
+    str_detect(position_standardized, "border") ~ "CBSA",
+    str_detect(position_standardized, "food inspection") ~ "CFIA",
+    str_detect(position_standardized, "school") ~ "CSPS",
+    str_detect(position_standardized, "statistician") ~ "StatCan",
+    str_detect(position_standardized, "correction") ~ "CSC",
+    TRUE ~ NA_character_
+  )) %>%
+  select(
+    id:position,
+    position_standardized,
+    position_portfolio_department,
+    salary_min:salary_max,
+    salary_range,
+    start:end,
+    everything()
   )
+
+# salary_revisions %>% count(position_portfolio_department, sort = TRUE) %>% mutate(prop = round(n / sum(n), 2))
+# salary_revisions %>% count(position_standardized, position_portfolio_department) %>% View()
+# salary_revisions %>% count(position_standardized, position_portfolio_department) %>% filter(is.na(position_portfolio_department)) %>% arrange(-n) %>% View()
+
+# TODO: filter out...
+# - ambassador
+# - consul (as whole word)
+# filter in...
+# - "deputy"
+# - "secretary"
+# - "minister"
+# - "advisor"
+# - "lead"
+# - "coordinator"
+# - "comptroller"
+# - "officer"
+# - "commissioner"
+# - "clerk"
+# - "president"
+# - "chief"
+# - "attorney"
 
 salary_revisions %>% count(position, sort = TRUE)
 salary_revisions %>% count(position_standardized, sort = TRUE)
