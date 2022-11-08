@@ -139,7 +139,8 @@ salary_revisions_pre_2015 <- salary_revisions_raw %>%
   ) %>%
   filter(
     ! is.na(end), # catch a few oddballs (none of them are in-scope)
-    ! name_full == "Her Excellency the Governor General in Council" # some more oddballs
+    ! name_full == "Her Excellency the Governor General in Council", # some more oddballs
+    ! name_full == fixed("7(1) of the National Capital Act")
   )
 
 salary_revisions_pre_2015 %>% write_csv("data/out/deputy-salary-levels-revisions-pre-2015.csv")
@@ -282,8 +283,34 @@ salary_revisions <- bind_rows(
       TRUE ~ "1 - normal / other"
     )
   ) %>%
+  mutate(
+    name_standardized = str_to_lower(name_full),
+    name_standardized = str_replace_all(name_standardized, c(
+      "b.a. (bruce) archibald" = "bruce archibald",
+      "chistine hogan" = "christine hogan",
+      "daniel watson" = "daniel quan-watson",
+      "daphne l\\. meredith" = "daphne meredith",
+      "donna jane miller" = "donna miller",
+      "j. michael horgan" = "michael horgan",
+      "janet e\\. king" = "janet king",
+      "jonathan t\\. fried" = "jonathan fried",
+      "michelle d’auray" = "michelle d'auray",
+      "morris a\\. rosenberg" = "morris rosenberg",
+      "paul j\\. leblanc" = "paul leblanc",
+      "paul michael boothe" = "paul boothe",
+      "philippe s. rabot" = "philippe rabot",
+      "r\\. tiff macklem" = "tiff macklem",
+      "richard b\\. fadden" = "richard fadden",
+      "rob stewart" = "robert stewart",
+      "wayne g\\. wouters" = "wayne wouters",
+      "yaprak baltacio_lu" = "yaprak baltacioğlu"
+    ))
+  ) %>%
+  select(-name_last, -name_first) %>%
   select(
-    id:position,
+    id:name_full,
+    name_standardized,
+    position,
     position_standardized,
     position_portfolio_department,
     salary_min:salary_max,
@@ -352,6 +379,7 @@ salary_revisions_classified <- salary_revisions %>%
     ),
     end = case_when(
       pc_number == "2022-1092" & name_full == "Ava Yaskiel" & position == "Associate Deputy Minister of Finance with G7 and G20 responsibilities" & start == "2021-04-01" ~ ymd("2021-08-31"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=39511&lang=en (no subsequent appointment OICs)
+      pc_number == "2011-1158" & name_full == "Karen Jackson" & position == "Associate Deputy Minister of Human Resources and Skills Development" & start == "2011-04-01" ~ ymd("2011-08-03"), # ref: https://orders-in-council.canada.ca/attachment.php?attach=26486&lang=en (typo in date, 2001 instead of 2011)
       TRUE ~ end
     )
   ) %>%
@@ -380,6 +408,13 @@ salary_revisions_classified <- salary_revisions %>%
   mutate(fiscal_year_start = fiscal_year_start / 100000) %>%
   ungroup() %>%
   arrange(name_full, start)
+
+# setting end dates...
+# - group by name
+#   - need to standardize names first...
+# - for each row, if.na(end), set end to lead(start) - 1
+#   - but not if the time_length from end to start would then be more than 1 yr? 2 yrs? (there's a gap in 2012 for most we may want to cover)
+#   - assumes there's no duplicate starts?
 
 # find unclassified entries
 salary_revisions_classified %>%
