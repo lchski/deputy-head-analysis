@@ -384,9 +384,9 @@ salary_revisions_classified <- salary_revisions %>%
     )
   ) %>%
   mutate(fiscal_year_start = map_dbl(start, get_fiscal_year_start_for_date)) %>%
-  group_by(name_full, position_standardized, start) %>%
+  group_by(name_standardized, position_standardized, start) %>%
   fill(end, .direction = "updown") %>%
-  group_by(name_full, position_standardized, start, end) %>%
+  group_by(name_standardized, position_standardized, start, end) %>%
   slice_tail(n = 1) %>% # to check for possible errors (i.e., multiple revisions for same position in same fiscal year), run this after slice_tail: %>% group_by(name_full, position, fiscal_year_start) %>% count(fiscal_year_start) %>% filter(n > 1) %>% write_csv("data/out/multiple-revisions-in-fiscal.csv")
   mutate(fiscal_year_start = fiscal_year_start * 100000) %>% # inflate well beyond the tolerance, so we match years "exactly"
   difference_left_join(
