@@ -1343,6 +1343,38 @@ Date: 2004-04-08
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+6771,"<main>
+<p><strong>PC Number: </strong>2004-0570<br></p><p><strong>Date: </strong>2004-05-04</p><hr><p>   </p><p style=""line-height: 0.36in"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection&nbsp;6(3) of the <em>Financial Administration Act</em>, hereby appoints Charles-Antoine&nbsp;St-Jean of Gatineau, Quebec, to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other employment conditions as set out in the schedule hereto, which salary is within the range ($180,500&nbsp;-&nbsp;$212,300), effective June 1, 2004.</p> <p style=""line-height: 0.36in"">&nbsp;</p> <br> <p style=""line-height: 0.36in"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme Charles-Antoine&nbsp;St-Jean, de Gatineau (Québec), contrôleur général du Canada, à titre amovible, et fixe son traitement et d’autres conditions d'emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (180&nbsp;500&nbsp;$&nbsp;-&nbsp;212&nbsp;300&nbsp;$), à&nbsp;compter du 1<sup>er</sup>&nbsp;juin&nbsp;2004.</p>    <p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2004-0570
+
+
+Date: 2004-05-04
+
+ Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the Financial Administration Act, hereby appoints Charles-Antoine St-Jean of Gatineau, Quebec, to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other employment conditions as set out in the schedule hereto, which salary is within the range ($180,500 - $212,300), effective June 1, 2004.
+
+ 
+
+
+
+
+ Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Charles-Antoine St-Jean, de Gatineau (Québec), contrôleur général du Canada, à titre amovible, et fixe son traitement et d’autres conditions d'emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (180 500 $ - 212 300 $), à compter du 1er juin 2004.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 7554,"<main>
 <p><strong>PC Number: </strong>2004-0895<br></p><p><strong>Date: </strong>2004-08-04</p><hr><p>   </p><p style=""line-height: 0.36in"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to Privy Council Vote No. 1 of <em>Appropriation&nbsp;Act No. 2</em>, 1981-82, hereby appoints Ward P.D. Elcock of Ottawa, Ontario, to be Senior Advisor to the Privy&nbsp;Council Office, to hold office during pleasure, and fixes his salary at the rate set out in the schedule hereto, which salary is within the range ($180,500 - $212,300), effective May 31, 2004.</p> <p style=""line-height: 0.36in"">&nbsp;</p> <br> <p style=""line-height: 0.36in"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sur recommandation du premier ministre et en vertu du crédit n<sup>o</sup> 1 du Conseil privé, de la <em>Loi n<sup>o</sup> 2 de 1981-82</em> portant affectation de crédits, Son Excellence la Gouverneure générale en conseil nomme Ward P.D. Elcock d’Ottawa (Ontario), à titre de conseiller supérieur auprès du Bureau du Conseil privé, à titre amovible, et fixe son traitement au taux spécifié à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (180 500 $ - 212 300 $), à compter du 31 mai 2004.</p>    <p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
         <!-- end main content -->
@@ -3907,6 +3939,37 @@ Sur recommandation du premier ministre et en vertu de l’alinéa 130d) de la Lo
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+17175,"<main>
+<p><strong>PC Number: </strong>2007-1474<br></p><p><strong>Date: </strong>2007-10-11</p><hr><p>    </p><div>  <p style=""text-indent:1.0in;line-height:150%"">Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection&nbsp;6(3) of the <em>Financial Administration Act</em>, hereby appoints Rodney Monette of Nepean, Ontario, to be Comptroller General of Canada, to be styled Interim Comptroller General of Canada, to hold office during pleasure, and fixes his salary at the rate set out in the annexed schedule, which salary is within the range ($199,700 - $234,900), effective October 27, 2007.</p>  </div>  <br clear=""all"" style=""page-break-before:always"">   <div>  <p style=""text-indent:1.0in"">Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme Rodney Monette, de Nepean (Ontario), contrôleur général du Canada, devant porter le titre contrôleur général du Canada intérimaire, à titre amovible, et fixe son traitement au taux spécifié à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (199&nbsp;700 $ - 234 900 $), à compter du 27 octobre 2007.</p>  </div>    
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2007-1474
+
+
+Date: 2007-10-11
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the Financial Administration Act, hereby appoints Rodney Monette of Nepean, Ontario, to be Comptroller General of Canada, to be styled Interim Comptroller General of Canada, to hold office during pleasure, and fixes his salary at the rate set out in the annexed schedule, which salary is within the range ($199,700 - $234,900), effective October 27, 2007.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Rodney Monette, de Nepean (Ontario), contrôleur général du Canada, devant porter le titre contrôleur général du Canada intérimaire, à titre amovible, et fixe son traitement au taux spécifié à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (199 700 $ - 234 900 $), à compter du 27 octobre 2007.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 18081,"<main>
 <p><strong>PC Number: </strong>2008-0262<br></p><p><strong>Date: </strong>2008-02-08</p><hr><p>    </p><div>  <p style=""text-indent:1.0in;line-height:200%"">Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to paragraph&nbsp;127.1(1)<em>(a) </em>of the <em>Public Service Employment Act, </em>hereby appoints David Mulroney, of Ottawa, Ontario, to be Deputy Minister of the Afghanistan Task Force, to hold office during pleasure, and fixes his salary as set out in the annexed schedule, which salary is within the range ($199,700 - $234,900).</p>  <p style=""text-indent:1.0in;line-height:200%"">&nbsp;</p>  </div>  <br clear=""all"" style=""page-break-before:always"">   <div>  <p style=""text-indent:1.0in;line-height:200%"">Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)<em>a</em>) de la <em>Loi sur l</em><em>’</em><em>emploi dans la fonction publique</em>, Son&nbsp;Excellence la Gouverneure générale en conseil nomme David Mulroney, d’Ottawa (Ontario), sous-ministre du Groupe de travail sur l’Afghanistan, à titre amovible et fixe son traitement conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (199&nbsp;700&nbsp;$ - 234&nbsp;900&nbsp;$)<em>.</em></p>  <p style=""text-indent:1.0in;line-height:200%"">&nbsp;</p>  <p style=""text-indent:1.0in;line-height:200%"">&nbsp;</p>  <p style=""line-height:200%"">&nbsp;</p>  <p style=""line-height:200%"">&nbsp;</p>  <p style=""line-height:200%"">&nbsp;</p>  </div>    
 <p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
@@ -3978,6 +4041,43 @@ Her Excellency the Governor General in Council, on the recommendation of the Pri
 
 
 Sur recommandation du premier ministre et en vertu de l_article 8 de la Loi sur le ministère des Affaires étrangères et du Commerce international, Son Excellence la Gouverneure générale en conseil nomme Stephen Rigby d_Ottawa (Ontario), au poste de sous‑ministre délégué des Affaires étrangères, à titre amovible, et fixe son traitement conformément à l'annexe ci‑jointe, lequel traitement se situe dans l'échelle (173 600 $ - 204 200 $), à compter du 3 mars 2008.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+18676,"<main>
+<p><strong>PC Number: </strong>2008-0833<br></p><p><strong>Date: </strong>2008-05-01</p><hr><p>    </p><div>  <p style=""text-indent:1.0in;line-height:200%"">Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the <em>Financial Administration Act</em>, hereby appoints Rodney Monette of Nepean, Ontario to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other conditions of employment as set out in the annexed schedule, which salary is within the range ($199,700 - $234,900), effective April&nbsp;28, 2008.</p>  </div>  <br clear=""all"" style=""page-break-before:always"">   <div>  <p style=""text-indent:1.0in;line-height:200%"">Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son&nbsp;Excellence la Gouverneure générale en conseil nomme Rodney&nbsp;Monette, de Nepean (Ontario), contrôleur général du Canada, à titre amovible, et fixe son traitement et autres conditions d’emploi au taux spécifié à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (199 700 $ - 234 900 $), à compter du 28&nbsp;avril&nbsp;2008.</p>  <p style=""line-height:200%"">&nbsp;</p>  <p style=""line-height:200%"">&nbsp;</p>  <p style=""line-height:200%"">&nbsp;</p>  </div>    
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2008-0833
+
+
+Date: 2008-05-01
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the Financial Administration Act, hereby appoints Rodney Monette of Nepean, Ontario to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other conditions of employment as set out in the annexed schedule, which salary is within the range ($199,700 - $234,900), effective April 28, 2008.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Rodney Monette, de Nepean (Ontario), contrôleur général du Canada, à titre amovible, et fixe son traitement et autres conditions d’emploi au taux spécifié à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (199 700 $ - 234 900 $), à compter du 28 avril 2008.
+
+ 
+
+ 
+
+ 
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -4785,6 +4885,46 @@ Her Excellency the Governor General in Council, on the recommendation of the Pri
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+20039,"<main>
+<p><strong>PC Number: </strong>2009-0190<br></p><p><strong>Date: </strong>2009-02-06</p><hr><p>
+
+</p><p style=""margin-left:0.50in;margin-right:1.50in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the <em>Financial Administration Act</em>, hereby appoints Michelle d’Auray of Ottawa, Ontario, to be President of the Public Service Human Resources Management Agency of Canada, to be styled Chief Human Resources Officer, to hold office during pleasure, and fixes her salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($203,600 - $239,600), effective March 2, 2009.
+</p>
+<br style=""page-break-before:always"">
+<p style=""margin-left:0.50in;margin-right:1.50in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme Michelle d’Auray, d’Ottawa (Ontario), au poste de président de l’Agence de gestion des ressources humaines de la fonction publique du Canada, devant porter le titre de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (203 600 $ - 239 600 $),  à compter du 2 mars 2009.
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2009-0190
+
+
+Date: 2009-02-06
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the Financial Administration Act, hereby appoints Michelle d’Auray of Ottawa, Ontario, to be President of the Public Service Human Resources Management Agency of Canada, to be styled Chief Human Resources Officer, to hold office during pleasure, and fixes her salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($203,600 - $239,600), effective March 2, 2009.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Michelle d’Auray, d’Ottawa (Ontario), au poste de président de l’Agence de gestion des ressources humaines de la fonction publique du Canada, devant porter le titre de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (203 600 $ - 239 600 $), à compter du 2 mars 2009.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 20041,"<main>
 <p><strong>PC Number: </strong>2009-0192<br></p><p><strong>Date: </strong>2009-02-06</p><hr><p>
 
@@ -5407,6 +5547,71 @@ Michael Horgan, d’Ottawa (Ontario), au poste de sous-ministre des Finances, à
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+21288,"<main>
+<p><strong>PC Number: </strong>2009-1406<br></p><p><strong>Date: </strong>2009-08-10</p><hr><p>
+
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the <em>Financial Administration Act</em>, hereby appoints Daphne Meredith of Ottawa, Ontario, to be President of the Public Service Human Resources Management Agency of Canada, to be styled Chief Human Resources Officer, to hold office during pleasure, and fixes her salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($206,700 - $243,200), effective August 31, 2009.
+
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme Daphne Meredith, d’Ottawa (Ontario), au poste de président de l’Agence de gestion des ressources humaines de la fonction publique du Canada, devant porter le titre de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (206 700 $ - 243 200 $), à compter 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+du 31 août 2009.
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2009-1406
+
+
+Date: 2009-08-10
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the Financial Administration Act, hereby appoints Daphne Meredith of Ottawa, Ontario, to be President of the Public Service Human Resources Management Agency of Canada, to be styled Chief Human Resources Officer, to hold office during pleasure, and fixes her salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($206,700 - $243,200), effective August 31, 2009.
+
+ 
+
+ 
+
+ 
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Daphne Meredith, d’Ottawa (Ontario), au poste de président de l’Agence de gestion des ressources humaines de la fonction publique du Canada, devant porter le titre de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (206 700 $ - 243 200 $), à compter
+
+du 31 août 2009.
+
+ 
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 21333,"<main>
 <p><strong>PC Number: </strong>2009-1449<br></p><p><strong>Date: </strong>2009-09-04</p><hr><p>
 
@@ -5813,6 +6018,51 @@ effective October 13, 2009.
  
 
 à compter du 13 octobre 2009.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+21458,"<main>
+<p><strong>PC Number: </strong>2009-1575<br></p><p><strong>Date: </strong>2009-09-16</p><hr><p>
+
+</p><p style=""margin-left:0.81in;margin-right:1.50in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+	&nbsp;	&nbsp;
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the <em>Financial Administration Act</em>, hereby appoints James Ralston of Ottawa
+, Ontario, to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other conditions of employment as set out in the annexed schedule, which salary is within the range ($206,700 - $243,200), effective October 3, 2009.
+</p>
+<br style=""page-break-before:always"">
+<p style=""margin-left:0.81in;margin-right:1.50in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+	&nbsp;
+	&nbsp;Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme James Ralston
+, d’Ottawa (Ontario), contrôleur général du Canada, à titre amovible, 
+et fixe son traitement et autres conditions d’emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (206 700 $ - 243 200 $), à compter du 3 octobre 2009.
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2009-1575
+
+
+Date: 2009-09-16
+
+ Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the Financial Administration Act, hereby appoints James Ralston of Ottawa , Ontario, to be Comptroller General of Canada, to hold office during pleasure, and fixes his salary and other conditions of employment as set out in the annexed schedule, which salary is within the range ($206,700 - $243,200), effective October 3, 2009.
+
+
+
+
+ Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme James Ralston , d’Ottawa (Ontario), contrôleur général du Canada, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (206 700 $ - 243 200 $), à compter du 3 octobre 2009.
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -7587,6 +7837,51 @@ paragraphs 127.1(1)(a) and (c) of the Public Service Employment Act, appoints Pa
 
 
  Sur recommandation du premier ministre et en vertu des alinéas 127.1(1)a) et c) de la Loi sur l’emploi dans la fonction publique, Son Excellence le Gouverneur général en conseil nomme Paul Rochon, d’Ottawa (Ontario), au poste de sous-ministre délégué de la Santé et, concurremment, conseiller spécial auprès du ministre des Finances pour les négociations sur un organisme canadien de réglementation des valeurs mobilières, à titre amovible, et fixe son traitement conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (188 600 $ - 221 800 $), à compter du 7 août 2012.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+26425,"<main>
+<p><strong>PC Number: </strong>2012-0989<br></p><p><strong>Date: </strong>2012-07-20</p><hr><p>
+
+</p><p style=""margin-left:0.50in;margin-right:1.88in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the <em>Financial Administration Act</em>, appoints Daniel Watson of Edmonton, Alberta, to be Chief Human Resources Officer, to hold office during pleasure, and fixes his salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($216,900 - $255,100), effective September 4, 2012.
+</p>
+<br style=""page-break-before:always"">
+<p style=""margin-left:0.50in;margin-right:1.88in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+
+</p><p style=""margin-left:0.50in;margin-right:1.88in;text-align:justify;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence le Gouverneur général en conseil nomme Daniel Watson, d’Edmonton (Alberta), au poste de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (216 900 $ - 255 100 $), à compter du 4 septembre 2012.
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2012-0989
+
+
+Date: 2012-07-20
+
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the Financial Administration Act, appoints Daniel Watson of Edmonton, Alberta, to be Chief Human Resources Officer, to hold office during pleasure, and fixes his salary and other employment conditions as set out in the annexed schedule, which salary is within the range ($216,900 - $255,100), effective September 4, 2012.
+
+
+
+
+ 
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence le Gouverneur général en conseil nomme Daniel Watson, d’Edmonton (Alberta), au poste de dirigeant principal des ressources humaines, à titre amovible, et fixe son traitement et autres conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (216 900 $ - 255 100 $), à compter du 4 septembre 2012.
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -10826,6 +11121,82 @@ Marta Morgan, d’Ottawa (Ontario), au poste de sous-ministre déléguée des Fi
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+29694,"<main>
+<p><strong>PC Number: </strong>2014-0877<br></p><p><strong>Date: </strong>2014-07-11</p><hr><p>
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+	&nbsp;	&nbsp;
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+of the <em>Financial Administration Act</em>, appoints William Matthews of Ottawa, Ontario, to be Comptroller General of Canada, to hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within the range ($190,500 - $224,100), effective July 17, 2014.
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p>
+<br style=""page-break-before:always"">
+<p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+	&nbsp;	&nbsp;Sur recommandation du premier ministre et en vertu 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence le Gouverneur général en conseil nomme 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+William Matthews, d’Ottawa (Ontario), contrôleur général du Canada, 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+à titre amovible, et fixe sa rémunération conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (190 500 $ - 224 100 $), à compter du 17 juillet 2014.
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+	&nbsp;	&nbsp;
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2014-0877
+
+
+Date: 2014-07-11
+
+ His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3)
+
+of the Financial Administration Act, appoints William Matthews of Ottawa, Ontario, to be Comptroller General of Canada, to hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within the range ($190,500 - $224,100), effective July 17, 2014.
+
+ 
+
+ 
+
+
+
+
+ Sur recommandation du premier ministre et en vertu
+
+du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence le Gouverneur général en conseil nomme
+
+William Matthews, d’Ottawa (Ontario), contrôleur général du Canada,
+
+à titre amovible, et fixe sa rémunération conformément à l'annexe ci-jointe, lequel traitement se situe dans l'échelle (190 500 $ - 224 100 $), à compter du 17 juillet 2014.
+
+ 
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 29819,"<main>
 <p><strong>PC Number: </strong>2014-1012<br></p><p><strong>Date: </strong>2014-09-26</p><hr><p>
 
@@ -11832,6 +12203,60 @@ His Excellency the Governor General in Council, on the recommendation of the Pri
 Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence le Gouverneur général en conseil nomme Les Linklater, d’Ottawa (Ontario), au poste de sous-secrétaire du Cabinet (Opérations), Bureau du Conseil privé, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (190 500 $ - 224 100 $), à compter du 20 juillet 2015.
 
  
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+31388,"<main>
+<p><strong>PC Number: </strong>2015-1060<br></p><p><strong>Date: </strong>2015-07-03</p><hr><p>
+
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+of the <em>Financial Administration Act</em>, appoints Anne Marie Smart of 
+
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Ottawa, Ontario, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($190,500 - $224,100), effective August 10, 2015.
+
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence le Gouverneur général en conseil nomme Anne Marie Smart, d’Ottawa (Ontario), au poste de dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (190 500 $ - 224 100 $), à compter du 10 août 2015.
+</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2015-1060
+
+
+Date: 2015-07-03
+
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1)
+
+of the Financial Administration Act, appoints Anne Marie Smart of
+
+Ottawa, Ontario, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($190,500 - $224,100), effective August 10, 2015.
+
+ 
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence le Gouverneur général en conseil nomme Anne Marie Smart, d’Ottawa (Ontario), au poste de dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (190 500 $ - 224 100 $), à compter du 10 août 2015.
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -14548,6 +14973,46 @@ Sur recommandation du premier ministre et en vertu de l’article 8 de la Loi su
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+35074,"<main>
+<p><strong>PC Number: </strong>2017-1167<br></p><p><strong>Date: </strong>2017-09-22</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:0.98in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the <em>Financial Administration Act</em>, appoints Roch Huppé of Gatineau, Quebec, to be Comptroller General of Canada, to hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within the range ($192,600 - $226,500), effective October 23, 2017.</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:0.98in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence le Gouverneur général en conseil nomme Roch Huppé, de Gatineau (Québec), au poste de contrôleur général du Canada, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (192 600 $ – 226 500 $), à compter du 23 octobre 2017.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2017-1167
+
+
+Date: 2017-09-22
+
+His Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3) of the Financial Administration Act, appoints Roch Huppé of Gatineau, Quebec, to be Comptroller General of Canada, to hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within the range ($192,600 - $226,500), effective October 23, 2017.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(3) de la Loi sur la gestion des finances publiques, Son Excellence le Gouverneur général en conseil nomme Roch Huppé, de Gatineau (Québec), au poste de contrôleur général du Canada, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (192 600 $ – 226 500 $), à compter du 23 octobre 2017.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 35235,"<main>
 <p><strong>PC Number: </strong>2017-1325<br></p><p><strong>Date: </strong>2017-10-27</p><hr><p>
 
@@ -15087,6 +15552,46 @@ Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de 
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+36676,"<main>
+<p><strong>PC Number: </strong>2018-1032<br></p><p><strong>Date: </strong>2018-07-19</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to paragraph 127.1(1)(a) of the <em>Public Service Employment Act</em>, appoints Alex Benay of Ottawa, Ontario, to be Chief Information Officer of Canada, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($202,500 - $238,200), effective July 2, 2018.</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la <em>Loi sur l’emploi dans la fonction publique</em>, Son Excellence la Gouverneure générale en conseil nomme Alex Benay, d’Ottawa (Ontario), dirigeant principal de l’information du Canada, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (202 500 $ – 238 200 $), à compter du 2 juillet 2018.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2018-1032
+
+
+Date: 2018-07-19
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to paragraph 127.1(1)(a) of the Public Service Employment Act, appoints Alex Benay of Ottawa, Ontario, to be Chief Information Officer of Canada, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($202,500 - $238,200), effective July 2, 2018.
+
+
+
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Alex Benay, d’Ottawa (Ontario), dirigeant principal de l’information du Canada, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (202 500 $ – 238 200 $), à compter du 2 juillet 2018.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 36725,"<main>
 <p><strong>PC Number: </strong>2018-1046<br></p><p><strong>Date: </strong>2018-08-09</p><hr><p>
 
@@ -15164,6 +15669,46 @@ Her Excellency the Governor General in Council, on the recommendation of the Pri
 
 
 Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Guylaine Roy, d’Ottawa (Ontario), sous-ministre du Tourisme, des Langues officielles et de la Francophonie, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (232 700 $ – 273 700 $), à compter du 13 août 2018.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+36740,"<main>
+<p><strong>PC Number: </strong>2018-1054<br></p><p><strong>Date: </strong>2018-08-23</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the <em>Financial Administration Act</em>, appoints Nancy Chahwan of Montréal, Quebec, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($202,500 - $238,200), effective August 29, 2018.</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la <em>Loi sur la gestion des finances publiques</em>, Son Excellence la Gouverneure générale en conseil nomme Nancy Chahwan, de Montréal (Québec), dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (202 500 $ – 238 200 $), à compter du 29 août 2018.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2018-1054
+
+
+Date: 2018-08-23
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the Financial Administration Act, appoints Nancy Chahwan of Montréal, Quebec, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($202,500 - $238,200), effective August 29, 2018.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence la Gouverneure générale en conseil nomme Nancy Chahwan, de Montréal (Québec), dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (202 500 $ – 238 200 $), à compter du 29 août 2018.
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -17637,6 +18182,46 @@ Sur recommandation du premier ministre et en vertu de l’article 3 de la Loi su
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+40553,"<main>
+<p><strong>PC Number: </strong>2021-0353<br></p><p><strong>Date: </strong>2021-04-30</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+His Excellency the Administrator of the Government of&nbsp;Canada in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the <em>Financial Administration Act</em>, appoints Christine Donoghue of Gatineau, Quebec, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set&nbsp;out in the annexed schedule, which salary is within the range ($232,700&nbsp;-&nbsp;$273,700), effective May 3, 2021. </p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du&nbsp;paragraphe 6(2.1) de la&nbsp;<em>Loi sur la gestion des finances publiques</em>,&nbsp;Son&nbsp;Excellence l’administrateur du gouvernement du Canada en conseil<em>&nbsp;</em>nomme Christine Donoghue, de Gatineau (Québec), dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle&nbsp;(232 700 $ – 273 700 $),&nbsp;à compter du 3 mai 2021. </p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2021-0353
+
+
+Date: 2021-04-30
+
+His Excellency the Administrator of the Government of Canada in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(2.1) of the Financial Administration Act, appoints Christine Donoghue of Gatineau, Quebec, to be Chief Human Resources Officer, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($232,700 - $273,700), effective May 3, 2021.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(2.1) de la Loi sur la gestion des finances publiques, Son Excellence l’administrateur du gouvernement du Canada en conseil nomme Christine Donoghue, de Gatineau (Québec), dirigeante principale des ressources humaines, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (232 700 $ – 273 700 $), à compter du 3 mai 2021.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
 40609,"<main>
 <p><strong>PC Number: </strong>2021-0409<br></p><p><strong>Date: </strong>2021-05-19</p><hr><p>
 
@@ -17887,6 +18472,47 @@ His Excellency the Administrator of the Government of Canada in Council, on the 
  
 
 Sur recommandation du premier ministre et en vertu du paragraphe 8(1) de la Loi sur le ministère des Affaires étrangères, du Commerce et du Développement, Son Excellence l’administrateur du gouvernement du Canada en conseil nomme Christopher MacLennan de Gatineau (Québec), sous-ministre délégué des Affaires étrangères, concurremment représentant personnel du premier ministre pour le sommet du G20, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (202 500 $ – 238 200 $).
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
+41022,"<main>
+<p><strong>PC Number: </strong>2021-0717<br></p><p><strong>Date: </strong>2021-07-08</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.11in;"">
+His Excellency the Administrator of the Government of&nbsp;Canada&nbsp;in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3.1) of the <em>Financial Administration Act</em>, appoints Catherine Luelo of Beaconsfield, Quebec, to be Chief Information Officer of&nbsp;Canada, to hold office during pleasure, and fixes her remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($232,700 - $272,700), effective July 26, 2021.</p>
+<br style=""page-break-before:always"">
+</div><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu du&nbsp;paragraphe 6(3.1) de la <em>Loi sur la gestion des finances publiques</em>,&nbsp;Son&nbsp;Excellence l’administrateur du gouvernement du Canada en conseil<em>&nbsp;</em>nomme Catherine Luelo, de Beaconsfield (Québec), dirigeante principale de&nbsp;l’information du Canada, à titre amovible, et fixe sa rémunération et&nbsp;certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel&nbsp;traitement se situe dans l’échelle (232 700 $ – 272 700 $), à&nbsp;compter&nbsp;du 26 juillet 2021.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-07-11"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2021-0717
+
+
+Date: 2021-07-08
+
+His Excellency the Administrator of the Government of Canada in Council, on the recommendation of the Prime Minister, pursuant to subsection 6(3.1) of the Financial Administration Act, appoints Catherine Luelo of Beaconsfield, Quebec, to be Chief Information Officer of Canada, to hold office during pleasure, and fixes her remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($232,700 - $272,700), effective July 26, 2021.
+
+
+
+
+Sur recommandation du premier ministre et en vertu du paragraphe 6(3.1) de la Loi sur la gestion des finances publiques, Son Excellence l’administrateur du gouvernement du Canada en conseil nomme Catherine Luelo, de Beaconsfield (Québec), dirigeante principale de l’information du Canada, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (232 700 $ – 272 700 $), à compter du 26 juillet 2021.
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-07-11"", showPostContent: true });"
@@ -20134,3 +20760,366 @@ Sur recommandation du premier ministre et en vertu de l’article 7 de la Loi su
 
 Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
 var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-15"", showPostContent: true });"
+42744,"<main>
+<p><strong>PC Number: </strong>2022-1162<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(b) of the&nbsp;<em>Public Service Employment Act</em>, appoints Francis Trudel of Gatineau,&nbsp;Quebec, to be Associate Chief Human Resources Officer, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300&nbsp;-&nbsp;$258,000), effective October 31, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu de&nbsp;l’alinéa&nbsp;127.1(1)b) de la <em>Loi sur l’emploi dans la fonction publique</em>, Son&nbsp;Excellence la&nbsp;Gouverneure générale en conseil<em>&nbsp;</em>nomme Francis&nbsp;Trudel, de Gatineau&nbsp;(Québec), dirigent délégué des ressources humaines, à titre&nbsp;amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle&nbsp;(219 300&nbsp;$&nbsp;–&nbsp;258 000&nbsp;$), à compter du 31 octobre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1162
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(b) of the Public Service Employment Act, appoints Francis Trudel of Gatineau, Quebec, to be Associate Chief Human Resources Officer, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective October 31, 2022.
+
+
+
+
+ 
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)b) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Francis Trudel, de Gatineau (Québec), dirigent délégué des ressources humaines, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300 $ – 258 000 $), à compter du 31 octobre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42745,"<main>
+<p><strong>PC Number: </strong>2022-1161<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of&nbsp;the&nbsp;<em>Public Service Employment Act</em>, appoints Kevin&nbsp;Brosseau of Ottawa,&nbsp;Ontario, to be Associate Deputy Minister of Fisheries and Oceans, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective November 14, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu&nbsp;de&nbsp;l’alinéa 127.1(1)a) de la <em>Loi sur l’emploi dans la fonction publique</em>,&nbsp;Son&nbsp;Excellence la Gouverneure générale en conseil<em>&nbsp;</em>nomme Kevin&nbsp;Brosseau, d’Ottawa (Ontario), sous-ministre délégué des Pêches et des Océans, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219&nbsp;300&nbsp;$&nbsp;–&nbsp;258 000&nbsp;$), à compter du 14 novembre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1161
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of the Public Service Employment Act, appoints Kevin Brosseau of Ottawa, Ontario, to be Associate Deputy Minister of Fisheries and Oceans, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective November 14, 2022.
+
+
+
+
+ 
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Kevin Brosseau, d’Ottawa (Ontario), sous-ministre délégué des Pêches et des Océans, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300 $ – 258 000 $), à compter du 14 novembre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42746,"<main>
+<p><strong>PC Number: </strong>2022-1160<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of&nbsp;the&nbsp;<em>Public Service Employment Act</em>, appoints Lawrence Hanson of&nbsp;Ottawa,&nbsp;Ontario, to be Associate Deputy Minister of Environment and&nbsp;Climate Change, to&nbsp;hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within&nbsp;the&nbsp;range ($219,300 - $258,000), effective November 14, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu de&nbsp;l’alinéa&nbsp;127.1(1)a) de la&nbsp;<em>Loi sur l’emploi dans la fonction publique</em>, Son&nbsp;Excellence la&nbsp;Gouverneure générale en conseil<em>&nbsp;</em>nomme Lawrence&nbsp;Hanson, d’Ottawa&nbsp;(Ontario), sous-ministre délégué de l’Environnement et du Changement climatique, à&nbsp;titre amovible, et&nbsp;fixe&nbsp;sa rémunération conformément à l’annexe ci-jointe, lequel&nbsp;traitement se situe dans l’échelle (219&nbsp;300&nbsp;$&nbsp;–&nbsp;258 000&nbsp;$), à&nbsp;compter&nbsp;du 14 novembre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1160
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of the Public Service Employment Act, appoints Lawrence Hanson of Ottawa, Ontario, to be Associate Deputy Minister of Environment and Climate Change, to hold office during pleasure, and fixes his remuneration as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective November 14, 2022.
+
+
+
+
+ 
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Lawrence Hanson, d’Ottawa (Ontario), sous-ministre délégué de l’Environnement et du Changement climatique, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300 $ – 258 000 $), à compter du 14 novembre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42747,"<main>
+<p><strong>PC Number: </strong>2022-1159<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under section 11 of the <em>Atlantic Canada Opportunities Agency Act</em>, appoints Catherine Blewett of Halifax,&nbsp;Nova Scotia, Deputy Minister of Economic Development, to be concurrently President of the Atlantic Canada Opportunities Agency, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($282,200 - $332,000), effective November 26, 2022. </p>
+<br style=""page-break-before:always"">
+</div><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.11in;"">
+&nbsp;
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+Sur recommandation du premier ministre et en vertu de l’article 11 de la <em>Loi sur l’Agence de promotion économique du Canada atlantique</em>, Son Excellence la Gouverneure générale en conseil nomme Catherine Blewett, de Halifax (Nouvelle-Écosse), sous-ministre du Développement économique, concurremment présidente de l’Agence de promotion économique du Canada atlantique, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (282 200 $ – 332 000 $), à compter du 26 novembre 2022.
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-indent:1.18in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-align:center;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;color:#333333;"">
+&nbsp;</p>
+
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1159
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under section 11 of the Atlantic Canada Opportunities Agency Act, appoints Catherine Blewett of Halifax, Nova Scotia, Deputy Minister of Economic Development, to be concurrently President of the Atlantic Canada Opportunities Agency, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($282,200 - $332,000), effective November 26, 2022.
+
+
+
+
+ 
+
+ 
+
+Sur recommandation du premier ministre et en vertu de l’article 11 de la Loi sur l’Agence de promotion économique du Canada atlantique, Son Excellence la Gouverneure générale en conseil nomme Catherine Blewett, de Halifax (Nouvelle-Écosse), sous-ministre du Développement économique, concurremment présidente de l’Agence de promotion économique du Canada atlantique, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (282 200 $ – 332 000 $), à compter du 26 novembre 2022.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42748,"<main>
+<p><strong>PC Number: </strong>2022-1158<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of&nbsp;the <em>Public&nbsp;Service Employment Act</em>, appoints Suzy McDonald of Ottawa,&nbsp;Ontario, to be Associate Deputy Minister of Agriculture and Agri-Food, to hold office during pleasure, and fixes her remuneration and certain conditions of employment as&nbsp;set out in the annexed schedule, which salary is within the&nbsp;range ($219,300&nbsp;-&nbsp;$258,000), effective October 31, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu de l’alinéa&nbsp;127.1(1)a) de la&nbsp;<em>Loi sur l’emploi dans la fonction publique</em>, Son&nbsp;Excellence la Gouverneure générale en conseil nomme Suzy&nbsp;McDonald, d’Ottawa (Ontario), sous-ministre déléguée de l’Agriculture et de l’Agroalimentaire, à titre amovible, et&nbsp;fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300&nbsp;$&nbsp;–&nbsp;258 000&nbsp;$), à&nbsp;compter du 31 octobre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1158
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of the Public Service Employment Act, appoints Suzy McDonald of Ottawa, Ontario, to be Associate Deputy Minister of Agriculture and Agri-Food, to hold office during pleasure, and fixes her remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective October 31, 2022.
+
+
+
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Suzy McDonald, d’Ottawa (Ontario), sous-ministre déléguée de l’Agriculture et de l’Agroalimentaire, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300 $ – 258 000 $), à compter du 31 octobre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42749,"<main>
+<p><strong>PC Number: </strong>2022-1157<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of&nbsp;the <em>Public&nbsp;Service Employment Act</em>, appoints Dominic Rochon of Ottawa,&nbsp;Ontario, to&nbsp;be Associate Deputy Minister of Transport, to hold office during pleasure, and&nbsp;fixes&nbsp;his remuneration and certain conditions of employment as set out in the&nbsp;annexed&nbsp;schedule, which salary is within the range ($219,300 - $258,000), effective&nbsp;October 31, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu de&nbsp;l’alinéa&nbsp;127.1(1)a) de la&nbsp;<em>Loi sur l’emploi dans la fonction publique</em>, Son&nbsp;Excellence la Gouverneure générale en conseil nomme Dominic&nbsp;Rochon, d’Ottawa (Ontario), sous-ministre délégué des Transports, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300&nbsp;$&nbsp;–&nbsp;258 000&nbsp;$), à&nbsp;compter du 31 octobre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1157
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under paragraph 127.1(1)(a) of the Public Service Employment Act, appoints Dominic Rochon of Ottawa, Ontario, to be Associate Deputy Minister of Transport, to hold office during pleasure, and fixes his remuneration and certain conditions of employment as set out in the annexed schedule, which salary is within the range ($219,300 - $258,000), effective October 31, 2022.
+
+
+
+
+Sur recommandation du premier ministre et en vertu de l’alinéa 127.1(1)a) de la Loi sur l’emploi dans la fonction publique, Son Excellence la Gouverneure générale en conseil nomme Dominic Rochon, d’Ottawa (Ontario), sous-ministre délégué des Transports, à titre amovible, et fixe sa rémunération et certaines conditions d’emploi conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (219 300 $ – 258 000 $), à compter du 31 octobre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
+42750,"<main>
+<p><strong>PC Number: </strong>2022-1156<br></p><p><strong>Date: </strong>2022-10-20</p><hr><p>
+
+</p><div style=""line-height:200%"">
+<p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under section 3 of the <em>Department of&nbsp;Fisheries and Oceans Act</em>, appoints Annette Gibbons of Ottawa, Ontario, to&nbsp;be Deputy Minister of Fisheries and Oceans, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($252,000 - $296,400), effective October 31, 2022.</p>
+<br style=""page-break-before:always"">
+<p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+&nbsp;
+</p><p style=""text-indent:1.00in;text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+Sur recommandation du premier ministre et en vertu&nbsp;de 
+</p><p style=""text-align:left;margin-top:0.00in;margin-bottom:0.00in;"">
+l’article&nbsp;3&nbsp;de la <em>Loi sur le ministère des Pêches et des Océans</em>, Son&nbsp;Excellence la&nbsp;Gouverneure générale en conseil nomme Annette Gibbons, d’Ottawa (Ontario), sous-ministre des Pêches et des Océans, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (252&nbsp;000&nbsp;$&nbsp;–&nbsp;296 400&nbsp;$), à compter du 31 octobre 2022.</p>
+
+</div>
+<p></p><form method=""post"" action=""index.php""><input type=""submit"" value=""Back to Form"" class=""btn btn-primary"" name=""return""></form>		
+        <!-- end main content -->
+        <div id=""def-preFooter"">
+       		<!-- Write closure fall-back static file -->
+             <!--Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"") -->
+        </div>
+		<!-- Write closure template -->
+        <script type=""text/javascript"">
+            var defPreFooter = document.getElementById(""def-preFooter"");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                cdnEnv: ""prod"",
+                dateModified: ""2022-10-26"",
+                showPostContent: true
+            });
+        </script>
+</main>","PC Number: 2022-1156
+
+
+Date: 2022-10-20
+
+Her Excellency the Governor General in Council, on the recommendation of the Prime Minister, under section 3 of the Department of Fisheries and Oceans Act, appoints Annette Gibbons of Ottawa, Ontario, to be Deputy Minister of Fisheries and Oceans, to hold office during pleasure, and fixes her remuneration as set out in the annexed schedule, which salary is within the range ($252,000 - $296,400), effective October 31, 2022.
+
+
+
+
+ 
+
+Sur recommandation du premier ministre et en vertu de
+
+l’article 3 de la Loi sur le ministère des Pêches et des Océans, Son Excellence la Gouverneure générale en conseil nomme Annette Gibbons, d’Ottawa (Ontario), sous-ministre des Pêches et des Océans, à titre amovible, et fixe sa rémunération conformément à l’annexe ci-jointe, lequel traitement se situe dans l’échelle (252 000 $ – 296 400 $), à compter du 31 octobre 2022.
+
+Write closure fall-back static file Response.Write readFile(""StaticFallbackFiles/gcweb/preFooter-"" & $lang & "".html"")
+var defPreFooter = document.getElementById(""def-preFooter""); defPreFooter.outerHTML = wet.builder.preFooter({ cdnEnv: ""prod"", dateModified: ""2022-10-26"", showPostContent: true });"
