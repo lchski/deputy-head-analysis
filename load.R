@@ -12,12 +12,7 @@ deputy_appointment_order_attachments <- read_csv("data/source/github.com/lchski/
   left_join(
     deputy_appointment_orders %>%
       select(attachments, pc_number, date),
-    by = c("id" = "attachments")) %>%
-  mutate(
-    text = str_replace_all(text, "\n(?!\n\n)", " "),
-    text = str_squish(text)
-  ) %>%
-  filter(str_detect(text, "which (salary|remuneration) is within the range")) # only attachments with salary ranges
+    by = c("id" = "attachments"))
 
 # TODO: convert `attachments` to list[integer]
 salary_orders <- read_csv("data/source/github.com/lchski/oic-data/salary-orders.csv") %>%
