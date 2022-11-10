@@ -73,6 +73,7 @@ appointments <- appointments_raw %>%
       id == 40197 ~ mdy("February 14, 2021"), # manual, vs parsing
       TRUE ~ mdy(start)
     ),
+    start = if_else(is.na(start), date, start),
     end = mdy(end), # NB: could also impute where `term` has "X year(s)", but eh
     across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]"))),
     authority = str_remove(authority, "^.*on the recommendation of the Prime Minister,? "),
@@ -103,3 +104,14 @@ appointments <- appointments_raw %>%
     end,
     term
   )
+
+appointments_classified <- appointments %>%
+  mutate(fiscal_year_start = map_dbl(start, get_fiscal_year_start_for_date)) %>%
+  classify_group_levels_for_salary() %>%
+  estimate_end_dates() # TODO: does the approach in this function make sense for this context? probably?
+
+# get a sense of our "match rate" per year
+appointments_classified %>%
+  count(fiscal_year_start, matched = ! is.na(matched_group_level)) %>%
+  ggplot(aes(x = fiscal_year_start, y = n, fill = matched)) +
+  geom_col()
