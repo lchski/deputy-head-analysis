@@ -407,7 +407,26 @@ salary_revisions_classified <- salary_revisions %>%
   select(-fiscal_year_start.y) %>%
   mutate(fiscal_year_start = fiscal_year_start / 100000) %>%
   ungroup() %>%
-  arrange(name_full, start)
+  arrange(name_standardized, start)
+
+zz <- salary_revisions_classified %>%
+  group_by(name_standardized) %>%
+  mutate(
+    end_is_estimated = is.na(end),
+    end = if_else(is.na(end), lead(start) - 1, end)
+  ) %>%
+  mutate(time_until_next_revision = time_length(end %--% lead(start), "years"))
+
+zz %>%
+  select(
+    pc_number,
+    name_standardized,
+    position_standardized,
+    start,
+    end,
+    end_is_estimated,
+    time_until_next_revision
+  )
 
 # setting end dates...
 # - group by name
@@ -415,6 +434,13 @@ salary_revisions_classified <- salary_revisions %>%
 # - for each row, if.na(end), set end to lead(start) - 1
 #   - but not if the time_length from end to start would then be more than 1 yr? 2 yrs? (there's a gap in 2012 for most we may want to cover)
 #   - assumes there's no duplicate starts?
+# once set, gut checks...
+# - some negative values for `time_until_next_revision`, to investigate
+# - no `end_is_estimated == TRUE` with a `time_until_next_revision > 0.002732240` (~one day)
+# missing end dates...
+# - basic set: `filter(is.na(time_until_next_revision), is.na(end))`
+# - from that set, can filter out anything with `start >= 2021-04-01`, since we'll assume any of those are current
+# - once we have more salary ranges, we could then filter out any that are unclassified (one reason there are a bunch without ends is we included a few salary orders that were for other groups _but included a few DMs_, so that'd muck things up)
 
 # find unclassified entries
 salary_revisions_classified %>%

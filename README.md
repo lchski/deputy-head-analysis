@@ -79,6 +79,7 @@ Signal phrases:
 
 Limitations:
 - doesn't capture DMs appointed or promoted after the latest salary order (currently October 2022), nor much movement within 2022
+- there doesn't seem to be a salary order for FY 2012-13, only 7 revisions for that year (may be able to fill in the blanks by looking at appointment orders directly)
 
 
 
