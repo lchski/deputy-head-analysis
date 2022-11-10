@@ -1,5 +1,7 @@
 source("load.R")
 
+source("lib/helpers.R")
+
 library(tidytext)
 library(lubridate)
 library(fuzzyjoin)
@@ -63,12 +65,41 @@ appointments <- appointments_raw %>%
   separate(appointment, into = c("pronoun", "appointment"), sep = " ", extra = "merge") %>%
   mutate(appointment = str_remove(appointment, "^.* which (?:salary|remuneration) is within the range \\(")) %>%
   separate(appointment, sep = " - |\\), |\\)\\.|\\) , ", into = c("salary_min", "salary_max", "start"), extra = "merge") %>%
+  separate(term, into = c("term", "end"), sep = ",? ending(?: on)? ", extra = "merge") %>%
   mutate(
     start = str_remove(start, "^effective "),
     start = case_when(
       str_detect(start, "upon approval of the Order in Council") ~ date,
+      id == 40197 ~ mdy("February 14, 2021"), # manual, vs parsing
       TRUE ~ mdy(start)
     ),
-    across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]")))
+    end = mdy(end), # NB: could also impute where `term` has "X year(s)", but eh
+    across(contains("salary"), ~ as.integer(str_remove_all(.x, "[^0-9]"))),
+    authority = str_remove(authority, "^.*on the recommendation of the Prime Minister,? "),
+    authority = str_remove(authority, "^pursuant to |^pursuant to the |^under |^under the"),
+    authority = str_remove(authority, "^the "),
+    position = str_remove(position, "^to be |^to the position of |^as ")
+  ) %>%
+  separate(position, into = c("position", "position_style"), sep = ",? (?:to be )?styled (?:as )?|, to be known as ", extra = "merge") %>%
+  separate(position, into = c("position_primary", "position_concurrent"), sep = " and,? concurrently,? |, to be concurrently ", extra = "merge") %>% # there's also "^Concurrently", mainly transport, but we can catch that through position_style -> position
+  mutate(
+    position = case_when(
+      ! is.na(position_style) ~ position_style,
+      TRUE ~ position_primary
+    )
+  ) %>%
+  standardize_positions() %>%
+  standardize_names() %>%
+  select(
+    id:authority,
+    name_full,
+    name_standardized,
+    pronoun,
+    city:province,
+    position,
+    contains("position"),
+    salary_min:salary_max,
+    start,
+    end,
+    term
   )
-# TODO: use `term` to get start dates (where there isn't one already), and end dates (where provided directly; ignore "X years"?)
