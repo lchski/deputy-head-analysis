@@ -154,5 +154,6 @@ estimate_end_dates <- function(df) {
     mutate(
       time_in_position = time_length(start %--% end, "years"),
       time_until_next = time_length(end %--% lead(start), "years")
-    )
+    ) %>%
+    ungroup()
 }

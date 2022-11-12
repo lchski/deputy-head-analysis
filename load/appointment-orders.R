@@ -6,10 +6,6 @@ library(tidytext)
 library(lubridate)
 library(fuzzyjoin)
 
-deputy_appointment_orders
-
-deputy_appointment_order_attachments
-
 appointments_raw <- deputy_appointment_order_attachments %>%
   mutate(
     text = str_remove_all(text, regex("^PC Number: [0-9]{4}-[0-9]{4}$", multiline = TRUE)), # opening PC number
@@ -37,11 +33,14 @@ multiline_appointment_ids <- appointments_raw %>%
 
 # TODO: deal with these
 multiline_appointments <- appointments_raw %>%
-  filter(id %in% more_than_1_ids)
+  filter(id %in% multiline_appointment_ids)
+
+multiline_appointments %>%
+  filter(! str_detect(appointment, "à la nomination"))
 
 appointments <- appointments_raw %>%
   filter(
-    ! id %in% more_than_1_ids,
+    ! id %in% multiline_appointment_ids,
     str_detect(appointment, "on the recommendation of the Prime Minister"), # a few odd ones, not DMs, recommended by not-PM
     str_detect(appointment, "appoints"), # TODO: deal with 14121, where an AssocDM is designated (not appointed) DM Int'l Trade, at what seems a higher level
     str_detect(appointment, "within the range"), # only ones with salary
@@ -108,10 +107,10 @@ appointments <- appointments_raw %>%
 appointments_classified <- appointments %>%
   mutate(fiscal_year_start = map_dbl(start, get_fiscal_year_start_for_date)) %>%
   classify_group_levels_for_salary() %>%
-  estimate_end_dates() # TODO: does the approach in this function make sense for this context? probably?
+  estimate_end_dates() # TODO: does the approach in this function make sense for this context? probably? NB: trips up on situations where a person had the same role twice (e.g., Clerk)
 
 # get a sense of our "match rate" per year
-appointments_classified %>%
-  count(fiscal_year_start, matched = ! is.na(matched_group_level)) %>%
-  ggplot(aes(x = fiscal_year_start, y = n, fill = matched)) +
-  geom_col()
+# appointments_classified %>%
+#   count(fiscal_year_start, matched = ! is.na(matched_group_level)) %>%
+#   ggplot(aes(x = fiscal_year_start, y = n, fill = matched)) +
+#   geom_col()
