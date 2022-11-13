@@ -77,9 +77,27 @@ Signal phrases:
 
 
 
+
 Limitations:
 - doesn't capture DMs appointed or promoted after the latest salary order (currently October 2022), nor much movement within 2022
 - there doesn't seem to be a salary order for FY 2012-13, only 7 revisions for that year (may be able to fill in the blanks by looking at appointment orders directly)
+
+
+
+Appointment orders:
+  
+  - check for presence in both appointments and salary datasets using this code, followed by `filter(is.na(appointments))` (or `salary`), depending which you want to look at:
+  ```appointments_classified %>%
+    count(name_standardized, name = "appointments") %>%
+    full_join(
+        salary_revisions_classified %>%
+            count(name_standardized, name = "salary")) %>%
+    mutate(in_both = ! is.na(appointments) & ! is.na(salary))```
+      - for `is.na(salary)`, meaning they appear in an appointment but not a salary order, (16 as of writing), we'd expect they're either: recently appointed (~after October 2022, so there's no salary order yet); not a deputy head (e.g., Secretary to the GG, or other GC/GCQ positions)
+      - for `is.na(appointments)`, meaning they appear in a salary order but not an appointment order (146 as of writing), they're likely: not captured from the OIC scoping for appointment orders (e.g., President of ACOA)
+        - we can prioritize these by arranging by the number of salary entries
+  
+
 
 
 

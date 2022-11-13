@@ -246,9 +246,9 @@ salary_revisions <- bind_rows(
 # - "chief"
 # - "attorney"
 
-salary_revisions %>% count(position, sort = TRUE)
-salary_revisions %>% count(position_standardized, sort = TRUE)
-salary_revisions %>% count(position_standardized, sort = TRUE) %>% View
+# salary_revisions %>% count(position, sort = TRUE)
+# salary_revisions %>% count(position_standardized, sort = TRUE)
+# salary_revisions %>% count(position_standardized, sort = TRUE) %>% View
 
 # TODO: for position_standardized, look at: ','
 

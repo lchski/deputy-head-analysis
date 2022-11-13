@@ -5,7 +5,8 @@ gic_salary_ranges <- read_csv("data/source/canada.ca/salary-ranges-gic-appointee
     read_csv("data/source/canada.ca/salary-ranges-gic-appointees.csv") %>%
       filter(fiscal_year_start == 2021) %>%
       mutate(fiscal_year_start = 2022)
-  )
+  ) %>%
+  arrange(group, fiscal_year_start, level)
 
 deputy_appointment_orders <- read_csv("data/source/github.com/lchski/oic-data/deputy-appointment-orders.csv")
 deputy_appointment_order_attachments <- read_csv("data/source/github.com/lchski/oic-data/deputy-appointment-order-attachments.csv") %>%

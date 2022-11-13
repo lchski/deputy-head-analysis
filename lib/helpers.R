@@ -83,13 +83,35 @@ standardize_positions <- function(df) {
 standardize_names <- function(df) {
   df %>%
     mutate(
+      # Handle some name edge cases:
+      # - "Natynczyk, Walter J., General (Retired), ..."
+      # - "Sabia, Michael Jonathan, O.C., ..."
+      # - "Shugart, P.C., Senator the Honourable Ian"
+      name_full = str_remove_all(
+        name_full,
+        paste("General \\(Retired\\), ", "O\\.C\\., ", "P\\.C\\., Senator the Honourable", ", Q\\.C\\.", ", O\\.C\\.", sep = "|")
+      ),
+      name_full = str_remove_all(
+        name_full,
+        ",$"
+      ),
+      name_full = str_squish(name_full),
       name_full = case_when(
+        name_full == "B.A. (Bruce) Archibald" ~ "Bruce Archibald",
         name_full == "Yaprak Baltacioglu" ~ "Yaprak Baltacioğlu",
         name_full == "David Butler-Jones" ~ "David Jones",
         name_full == "Ward P. D. Elcock" ~ "Ward P.D. Elcock",
         name_full == "William Pentney" ~ "William F. Pentney",
         name_full == "Yazmine Cecilia Laroche" ~ "Yazmine Laroche",
         name_full == "Yasmine Laroche" ~ "Yazmine Laroche",
+        name_full == "Ian Bennett" ~ "Ian E. Bennett",
+        name_full == "Larry Murray" ~ "Larry E. Murray",
+        name_full == "Leonard J. Edwards" ~ "Leonard Edwards",
+        name_full == "Myles Kirvan" ~ "Myles J. Kirvan",
+        name_full == "Stephen Richardson" ~ "Stephen R. Richardson",
+        name_full == "Walter Natynczyk" ~ "Walter J. Natynczyk",
+        name_full == "William Cairns McDowell" ~ "William C. McDowell",
+        name_full == "Bill Baker" | name_full == "William Victor Baker" ~ "William Baker",
         name_full == "Robert Fadden" ~ "Richard Fadden", # 2013-1353 has... the wrong name (for one of his roles!)
         TRUE ~ name_full
       )
@@ -99,7 +121,7 @@ standardize_names <- function(df) {
       name_standardized = str_replace_all(name_standardized, c(
         "b.a. (bruce) archibald" = "bruce archibald",
         "chistine hogan" = "christine hogan",
-        "daniel watson" = "daniel quan-watson",
+        "daniel watson|daniel lee quan watson" = "daniel quan-watson",
         "daphne l\\. meredith" = "daphne meredith",
         "donna jane miller" = "donna miller",
         "j. michael horgan" = "michael horgan",

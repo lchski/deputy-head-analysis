@@ -109,6 +109,8 @@ appointments_classified <- appointments %>%
   classify_group_levels_for_salary() %>%
   estimate_end_dates() # TODO: does the approach in this function make sense for this context? probably? NB: trips up on situations where a person had the same role twice (e.g., Clerk)
 
+appointments_classified %>% write_csv("data/out/appointments-classified.csv")
+
 # get a sense of our "match rate" per year
 # appointments_classified %>%
 #   count(fiscal_year_start, matched = ! is.na(matched_group_level)) %>%
