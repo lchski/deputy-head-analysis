@@ -94,9 +94,9 @@ Appointment orders:
             count(name_standardized, name = "salary")) %>%
     mutate(in_both = ! is.na(appointments) & ! is.na(salary))```
       - for `is.na(salary)`, meaning they appear in an appointment but not a salary order, (16 as of writing), we'd expect they're either: recently appointed (~after October 2022, so there's no salary order yet); not a deputy head (e.g., Secretary to the GG, or other GC/GCQ positions)
-      - for `is.na(appointments)`, meaning they appear in a salary order but not an appointment order (146 as of writing), they're likely: not captured from the OIC scoping for appointment orders (e.g., President of ACOA)
+      - for `is.na(appointments)`, meaning they appear in a salary order but not an appointment order (146 as of writing), they're likely: not in the OIC appointments (too far back, generally for positions starting before 2003/2004); not captured from the OIC scoping for appointment orders (e.g., President of ACOA); captured, but in multiline entries; captured, but filtered out accidentally (e.g., attachment ID 14119)
         - we can prioritize these by arranging by the number of salary entries
-  
+- we could find additional, older orders by going on precis alone (not attachments), but we wouldn't get salary ranges (likely not worth it)  
 
 
 

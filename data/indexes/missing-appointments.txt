@@ -1,0 +1,98 @@
+Paul Leblanc
+N/a Executive Vice-President, Atlantic Canada Opportunities Agency
+x23379 President, Atlantic Canada Opportunities Agency
+
+
+Bruce Archibald
+x21305 President, Federal Economic Development Agency for Southern Ontario
+x28132 President, Canadian Food Inspection Agency
+
+
+Jeffery hutchinson
+*33021 Commissioner of the Canadian Coast Guard
+*38721 Senior Advisor to the Privy Council Office
+
+
+Luc Portelance
+x19160 Executive Vice-President, Canada Border Services Agency
+x23386 President, Canada Border Services Agency
+
+
+Manon Brassard
+X32130 President of the Economic Development Agency of Canada for the Regions of Quebec
+
+
+Brian Evans
+x16480 Executive Vice-President, Canadian Food Inspection Agency
+*22640 Chief Food Safety Officer, Canadian Food Inspection Agency [precis doesn't include CFIA]
+x26401 Special Advisor to the President of the Canadian Food Inspection Agency
+
+
+Krista Outhwaite
+x23152 Executive Vice-President and Chief Operating Officer of the Public Health Agency of Canada
+x30514 President of the Public Health Agency of Canada
+
+
+Paula Isaak
+*36885 President of the Canadian Northern Economic Development Agency
+
+
+Shelly Bruce
+*35372 Associate Chief of the Communications Security Establishment
+*36507 Chief of the Communications Security Establishment
+
+
+Yvan Roy
+*15001 Deputy Secretary to the Cabinet (Legislation and House Planning and Machinery of Government), and Counsel, Privy Council Office (*15002 is mistakenly listed as the attachment for this appointment)
+
+
+David Moloney
+*20271 Executive Vice-President of the Canadian International Development Agency
+
+
+Michelle Chartrand
+*5242 President, Public Service Human Resources Management Agency of Canada
+
+
+Benoît Long
+*38980 Chief Transformation Officer, Service Canada
+
+
+Monique Boudrias
+*5231 Executive Vice-President, Public Service Human Resources Management Agency of Canada
+
+
+Don head
+*18876 Commissioner of Corrections
+
+
+Michel Dorais
+*8750 Commissioner of Customs and Revenue 
+
+
+Sarah Paquet
+*35840 Executive Vice-President of Shared Services Canada
+*39646 Director of the Financial Transactions and Reports Analysis Centre of Canada
+
+
+Jim Judd
+N/a Secretary of the Treasury Board and Comptroller General for Canada, Treasury Board
+N/a Secretary of the Treasury Board, Treasury Board
+*8639 Director, Canadian Security Intelligence Service
+
+
+Ruth Dantzer
+*11098 President of the Canada School of Public Service
+
+
+Wayne Smith
+*23664 Chief Statistician of Canada
+
+
+Peter Harrison
+*14125 Executive Director of the Public Appointments Commission Secretariat
+2036 Senior Research Fellow, Department of Industry
+
+
+Richard Dicerni
+14119 Deputy Minister, Department of Industry (*this one is scoped in, but has "within the range DM 3 (" instead of just "within the range (", so the line is likely filtered out somewhere)
