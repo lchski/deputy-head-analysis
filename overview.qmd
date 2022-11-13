@@ -1,0 +1,41 @@
+---
+title: "Deputy heads overview"
+format:
+  html:
+    df-print: paged
+    self-contained: true
+    prefer-html: true
+---
+
+```{r}
+#| echo: false
+#| output: false
+library(tidyverse)
+library(DT)
+```
+
+```{r}
+#| echo: false
+#| output: false
+#| cache: true
+source("load/appointment-orders.R")
+source("load/salary-orders.R")
+```
+
+Hello! We have, depending on the source (and assuming our standardizing worked properly!):
+
+- `r appointments_classified %>% distinct(name_standardized) %>% pull() %>% length()` deputy heads, according to the appointment orders
+- `r salary_revisions_classified %>% distinct(name_standardized) %>% pull() %>% length()` deputy heads, according to the salary orders
+
+Here are names that are in the salary set, but not the appointments set:
+
+```{r}
+appointments_classified %>%
+  count(name_standardized, name = "appointments") %>%
+  full_join(
+    salary_revisions_classified %>%
+      count(name_standardized, name = "salary")) %>%
+  mutate(in_both = ! is.na(appointments) & ! is.na(salary)) %>%
+  arrange(name_standardized) %>%
+  datatable()
+```
